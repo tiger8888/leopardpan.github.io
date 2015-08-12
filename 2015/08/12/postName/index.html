@@ -15,7 +15,7 @@
 <meta property="og:description" content="经过各种找资料，踩过何种坑，终于搭建好了hexo，域名目前用得时github的，我的hexo是3.1.1版本，hexo不同的版本，很多配置都不一样。好吧，废话不多说了，开始吧。
 正文：这边教程是针对与Mac的，原文,由于原文讲到的hexo是以前的老版本，所以现在的版本配置的时候会有些改动。
 之前是想着写博客，一方面是给自己做笔记，可以提升自己的写作、总结能力，一个技术点我们会使用，并不难，但是要做">
-<meta property="og:updated_time" content="2015-08-12T10:46:34.000Z">
+<meta property="og:updated_time" content="2015-08-12T10:55:03.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HEXO">
 <meta name="twitter:description" content="经过各种找资料，踩过何种坑，终于搭建好了hexo，域名目前用得时github的，我的hexo是3.1.1版本，hexo不同的版本，很多配置都不一样。好吧，废话不多说了，开始吧。
@@ -189,7 +189,7 @@
   
     <div class="article-meta">
       <a href="/2015/08/12/postName/" class="article-date">
-  	<time datetime="2015-08-12T10:46:34.000Z" itemprop="datePublished">2015-08-12</time>
+  	<time datetime="2015-08-12T10:55:03.000Z" itemprop="datePublished">2015-08-12</time>
 </a>
     </div>
   
@@ -282,22 +282,18 @@ db.json        package.json    scaffolds    themes
   <span class="built_in">type</span>: git
   repository: https://github.com/leopardpan/leopardpan.github.io.git
   branch: master
-``` bash
-网上会有很多说法，有的<span class="built_in">type</span>是github, 还有repository 最后面的后缀也不一样，是github.com.git，我也踩了很多坑，我现在的版本是hexo: <span class="number">3.1</span>.<span class="number">1</span>，执行命令hexo -vsersion就出来了,貌似<span class="number">3.0</span>后全部改成我上面这种格式了。
-忘了说了，我没用SSH Keys如果你用了SSH Keys的话直接在github里复制SSH的就行了，总共就两种协议，相信你懂的。
-然后，执行配置命令：
-``` bash
-hexo deploy
+</code></pre>
+<p>网上会有很多说法，有的type是github, 还有repository 最后面的后缀也不一样，是github.com.git，我也踩了很多坑，我现在的版本是hexo: 3.1.1，执行命令hexo -vsersion就出来了,貌似3.0后全部改成我上面这种格式了。<br>忘了说了，我没用SSH Keys如果你用了SSH Keys的话直接在github里复制SSH的就行了，总共就两种协议，相信你懂的。<br>然后，执行配置命令：</p>
+<pre><code class="bash">hexo deploy
 </code></pre>
 <p>然后再浏览器中输入<a href="http://leopardpan.github.io/" target="_blank" rel="external">http://leopardpan.github.io/</a>就行了，我的github的账户叫leopardpan,把这个改成你github的账户名就行了</p>
 <h3 id="部署步骤">部署步骤</h3><p>每次部署的步骤，可按以下三步来进行。</p>
 <pre><code class="bash">hexo clean
 hexo generate
 hexo deploy
-``` bash
-一些常用命令：
-``` bash
-hexo new <span class="string">"postName"</span> <span class="comment">#新建文章</span>
+</code></pre>
+<p>一些常用命令：</p>
+<pre><code class="bash">hexo new <span class="string">"postName"</span> <span class="comment">#新建文章</span>
 hexo new page <span class="string">"pageName"</span> <span class="comment">#新建页面</span>
 hexo generate <span class="comment">#生成静态页面至public目录</span>
 hexo server <span class="comment">#开启预览访问端口（默认端口4000，'ctrl + c'关闭server）</span>
@@ -305,18 +301,9 @@ hexo deploy <span class="comment">#将.deploy目录部署到GitHub</span>
 hexo <span class="built_in">help</span>  <span class="comment"># 查看帮助</span>
 hexo version  <span class="comment">#查看Hexo的版本</span>
 </code></pre>
-<p>这里有大量的<a href="https://github.com/hexojs/hexo/wiki/Themes" target="_blank" rel="external">主题列表</a>使用方法里面<br>都有详细的介绍，我就不多说了。<br>我这里有几款个人认为不错的主题，免去你们，一个一个的选了，欢迎吐槽我的审美，😄</p>
-<pre><code class="bash">[Cover](https://github.com/daisygao/hexo-themes-cover) - A chic theme with facebook-like cover photo
-[Oishi](https://github.com/henryhuang/oishi) - A white theme based on Landscape plus and Writing.
-[Sidebar](https://github.com/hardywu/hexo-theme-sidebar) - Another theme based on Light with a simple sidebar 
-[TKL](https://github.com/SuperKieran/TKL) - A responsive design theme <span class="keyword">for</span> Hexo. 一个设计优雅的响应式主题
-[Tinnypp](https://github.com/levonlin/Tinnypp) - A clean, simple theme based on Tinny
-[Writing](https://github.com/yunlzheng/hexo-themes-writing) - A small and simple hexo theme based on Light
-[Yilia](https://github.com/litten/hexo-theme-yilia) - Responsive and simple style 优雅简洁响应式主题，我用得就是这个。
-[Pacman voidy](https://github.com/Voidly/pacman) - A theme with dynamic tagcloud and dynamic snow
-</code></pre>
+<p>这里有大量的<a href="https://github.com/hexojs/hexo/wiki/Themes" target="_blank" rel="external">主题列表</a>使用方法里面<br>都有详细的介绍，我就不多说了。<br>我这里有几款个人认为不错的主题，免去你们，一个一个的选了，欢迎吐槽我的审美，😄<br><a href="https://github.com/daisygao/hexo-themes-cover" target="_blank" rel="external">Cover</a> - A chic theme with facebook-like cover photo<br><a href="https://github.com/henryhuang/oishi" target="_blank" rel="external">Oishi</a> - A white theme based on Landscape plus and Writing.<br><a href="https://github.com/hardywu/hexo-theme-sidebar" target="_blank" rel="external">Sidebar</a> - Another theme based on Light with a simple sidebar<br><a href="https://github.com/SuperKieran/TKL" target="_blank" rel="external">TKL</a> - A responsive design theme for Hexo. 一个设计优雅的响应式主题<br><a href="https://github.com/levonlin/Tinnypp" target="_blank" rel="external">Tinnypp</a> - A clean, simple theme based on Tinny<br><a href="https://github.com/yunlzheng/hexo-themes-writing" target="_blank" rel="external">Writing</a> - A small and simple hexo theme based on Light<br><a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="external">Yilia</a> - Responsive and simple style 优雅简洁响应式主题，我用得就是这个。<br><a href="https://github.com/Voidly/pacman" target="_blank" rel="external">Pacman voidy</a> - A theme with dynamic tagcloud and dynamic snow</p>
 <h2 id="文章路径">文章路径</h2><p>在source/_posts，如果你不怕麻烦的话可以跟我一样直接用vim去编辑，支持markdown语法，你有好的编辑软件，给我也推荐下，感激不尽😄，如果想修改头像可以直接在主题的_config.yml文件里面修改，友情链接，之类的都在这里，修改名字在public/index.html里修改，开始打理你的博客吧，有什么问题或者建议，都可以提出来，我会继续完善的。</p>
-<p>转载请注明原地址，潘柏信的博客HEXO：<a href="http://leopardpan.github.io/2015/08/12/postName/" target="_blank" rel="external">http://leopardpan.github.io/2015/08/12/postName/</a>，谢谢！</p>
+<p>转载请注明原地址，潘柏信的博客：<a href="http://leopardpan.github.io/2015/08/12/postName/" target="_blank" rel="external">http://leopardpan.github.io/2015/08/12/postName/</a> 谢谢！</p>
 
       
     </div>
