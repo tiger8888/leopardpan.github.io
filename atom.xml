@@ -5,7 +5,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com//"/>
-  <updated>2015-08-23T03:54:03.000Z</updated>
+  <updated>2015-08-23T04:25:36.000Z</updated>
   <id>http://yoursite.com//</id>
   
   <author>
@@ -19,8 +19,8 @@
     <title><![CDATA[HEXO]]></title>
     <link href="http://yoursite.com/2015/08/23/hexo/"/>
     <id>http://yoursite.com/2015/08/23/hexo/</id>
-    <published>2015-08-23T03:54:03.000Z</published>
-    <updated>2015-08-23T03:54:03.000Z</updated>
+    <published>2015-08-23T04:25:36.000Z</published>
+    <updated>2015-08-23T04:25:36.000Z</updated>
     <content type="html"><![CDATA[<p>经过各种找资料，踩过何种坑，终于搭建好了hexo，域名目前用得时github的，我的hexo是3.1.1版本，hexo不同的版本，很多配置都不一样。好吧，废话不多说了，开始吧。</p>
 <h2 id="正文：">正文：</h2><p>这边教程是针对与Mac的，<a href="http://ibruce.info/2013/11/22/hexo-your-blog/?utm_source=tuicool" target="_blank" rel="external">参考链接</a>，由于原文讲到的hexo是以前的老版本，所以现在的版本配置的时候会有些改动。</p>
 <p>之前是想着写博客，一方面是给自己做笔记，可以提升自己的写作、总结能力，一个技术点我们会使用，并不难，但是要做到让让别人也能听懂我们讲得，还是需要一定的技巧和经验的。很多类似于CSDN、博客园也都可以写文章，但是页面的样式我，不是太喜欢，简书还算好点得。最近看到一些大神们的博客（在我的友情链接里有），貌似都是用hexo写得，我也依葫芦画瓢的搭建了一个。不罗嗦了，直接上搭建步骤。</p>
@@ -31,9 +31,9 @@
 <pre><code class="bash">sudo npm install -g hexo
 </code></pre>
 <h3 id="初始化">初始化</h3><p>然后，执行init命令初始化hexo到你指定的目录，我是直接cd到目标目录执行hexo init的。命令：</p>
-<pre><code class="bash">hexo init
+<pre><code class="bash">hexo init blog
 </code></pre>
-<p>好啦，至此，全部安装工作已经完成！</p>
+<p>好啦，至此，全部安装工作已经完成！blog就是你的博客根目录，所有的操作都在里面进行。</p>
 <h3 id="生成静态页面">生成静态页面</h3><p>cd 到你的init目录，执行如下命令，生成静态页面至hexo\public\目录。</p>
 <pre><code class="bash">hexo generate （hexo g  也可以）
 </code></pre>
@@ -117,13 +117,13 @@ hexo version  <span class="comment">#查看Hexo的版本</span>
   </entry>
   
   <entry>
-    <title><![CDATA[blog]]></title>
+    <title><![CDATA[Blog]]></title>
     <link href="http://yoursite.com/2015/08/23/blog/"/>
     <id>http://yoursite.com/2015/08/23/blog/</id>
     <published>2015-08-23T01:46:18.000Z</published>
-    <updated>2015-08-23T03:44:52.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="iOS国内大神博客">iOS国内大神博客</h2><pre><code>作者：[<span class="link_label">唐巧</span>](<span class="link_url">http://www.devtang.com/blog/archives/</span>) 资深iOS开发者和Blogger，曾开发有道云笔记、猿题库和粉笔网的iOS客户端。他维护着iOS开发博客 http://www.devtang.com/ 和微信 iOS开发公众账号 iosDevTips
-内容：[<span class="link_label">iOS开发进阶作者</span>](<span class="link_url">http://www.devtang.com/blog/2014/12/07/about-ios-pro-book/</span>)、[<span class="link_label">iOS移动开发周报</span>][<span class="link_reference">唐巧</span>](http://www.devtang.com/blog/archives/)、[<span class="link_label">猿题库技术分享及系统架构</span>](<span class="link_url">http://engineering.yuantiku.com/blog/</span>)、[<span class="link_label">猿题库iOS团队</span>](<span class="link_url">https://github.com/yuantiku</span>)以及很多关于iOS的技术文章，[<span class="link_label">CoreText排版</span>](<span class="link_url">http://www.devtang.com/blog/2015/06/27/using-coretext-2/</span>)，[<span class="link_label">写iOS SDK注意事项</span>](<span class="link_url">http://www.devtang.com/blog/2015/01/31/write-sdk-tips/</span>)，[<span class="link_label">Tagged Pointer</span>](<span class="link_url">http://www.devtang.com/blog/2014/05/30/understand-tagged-pointer/</span>)对于64位程序，引入Tagged Pointer后，相关逻辑能减少一半的内存占用，以及3倍的访问速度提升，100倍的创建、销毁速度提升。[<span class="link_label">ReactiveCocoa</span>](<span class="link_url">http://www.devtang.com/blog/2014/02/11/reactivecocoa-introduction/</span>)的介绍及使用，[<span class="link_label">FMDB</span>](<span class="link_url">http://www.devtang.com/blog/2012/04/22/use-fmdb/</span>)的介绍及基本使用，更多请看[<span class="link_label">博主首页</span>](<span class="link_url">http://www.devtang.com/blog/archives/</span>)
+    <updated>2015-08-23T04:27:05.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="iOS国内大神博客">iOS国内大神博客</h2><pre><code>[<span class="link_label">唐巧</span>](<span class="link_url">http://www.devtang.com/blog/archives/</span>) 资深iOS开发者和Blogger，曾开发有道云笔记、猿题库和粉笔网的iOS客户端。他维护着iOS开发博客 http://www.devtang.com/ 和微信 iOS开发公众账号 iosDevTips
+[<span class="link_label">iOS开发进阶作者</span>](<span class="link_url">http://www.devtang.com/blog/2014/12/07/about-ios-pro-book/</span>)、[<span class="link_label">iOS移动开发周报</span>][<span class="link_reference">唐巧</span>](http://www.devtang.com/blog/archives/)、[<span class="link_label">猿题库技术分享及系统架构</span>](<span class="link_url">http://engineering.yuantiku.com/blog/</span>)、[<span class="link_label">猿题库iOS团队</span>](<span class="link_url">https://github.com/yuantiku</span>)以及很多关于iOS的技术文章，[<span class="link_label">CoreText排版</span>](<span class="link_url">http://www.devtang.com/blog/2015/06/27/using-coretext-2/</span>)，[<span class="link_label">写iOS SDK注意事项</span>](<span class="link_url">http://www.devtang.com/blog/2015/01/31/write-sdk-tips/</span>)，[<span class="link_label">Tagged Pointer</span>](<span class="link_url">http://www.devtang.com/blog/2014/05/30/understand-tagged-pointer/</span>)对于64位程序，引入Tagged Pointer后，相关逻辑能减少一半的内存占用，以及3倍的访问速度提升，100倍的创建、销毁速度提升。[<span class="link_label">ReactiveCocoa</span>](<span class="link_url">http://www.devtang.com/blog/2014/02/11/reactivecocoa-introduction/</span>)的介绍及使用，[<span class="link_label">FMDB</span>](<span class="link_url">http://www.devtang.com/blog/2012/04/22/use-fmdb/</span>)的介绍及基本使用，更多请看[<span class="link_label">博主首页</span>](<span class="link_url">http://www.devtang.com/blog/archives/</span>)
 
 作者：[<span class="link_label">王魏</span>](<span class="link_url">http://onevcat.com/#blog</span>) [<span class="link_label">github</span>](<span class="link_url">https://github.com/onevcat</span>) 喵神，一名来自中国的 iOS / Unity 开发者。现居日本，就职于 LINE。
 内容：维护[<span class="link_label">swifter.tips</span>](<span class="link_url">http://swifter.tips/</span>)、[<span class="link_label">Kingfisher</span>](<span class="link_url">https://github.com/onevcat/Kingfisher</span>)SDWebImage瘦身版后的Swift版、[<span class="link_label">ObjC 中国</span>](<span class="link_url">http://objccn.io/</span>)的发起人、[<span class="link_label">VVDocumenter</span>](<span class="link_url">https://github.com/onevcat/VVDocumenter-Xcode</span>)的作者之一，很多关于[<span class="link_label">WWDC笔记</span>](<span class="link_url">http://onevcat.com/#blog</span>)的文章，[<span class="link_label">TDD</span>](<span class="link_url">http://onevcat.com/2014/02/ios-test-with-kiwi/</span>)测试驱动开发，[<span class="link_label">xib和StoryBoard间的博弈</span>](<span class="link_url">http://onevcat.com/2013/12/code-vs-xib-vs-storyboard/</span>)，[<span class="link_label">宏定义</span>](<span class="link_url">http://onevcat.com/2014/01/black-magic-in-macro/</span>)宏在iOS开发的的使用及介绍，还有很多关于[<span class="link_label">Unity</span>](<span class="link_url">http://onevcat.com/page/5/#blog</span>)的文章、项目，更多请看[<span class="link_label">博主首页</span>](<span class="link_url">http://onevcat.com/#blog</span>)
@@ -135,7 +135,7 @@ hexo version  <span class="comment">#查看Hexo的版本</span>
 内容：[<span class="link_label">iOS项目架构</span>](<span class="link_url">http://casatwy.com/</span>)、[<span class="link_label">LLDB调试</span>](<span class="link_url">http://casatwy.com/index2.html</span>)、[<span class="link_label">iOS静态库和动态库的分析及生成静态库</span>](<span class="link_url">http://casatwy.com/ku.html</span>)
 </code></pre>]]></content>
     <summary type="html">
-    <![CDATA[<h2 id="iOS国内大神博客">iOS国内大神博客</h2><pre><code>作者：[<span class="link_label">唐巧</span>](<span class="link_url">http://www.devtang.com/blog/archi]]>
+    <![CDATA[<h2 id="iOS国内大神博客">iOS国内大神博客</h2><pre><code>[<span class="link_label">唐巧</span>](<span class="link_url">http://www.devtang.com/blog/archives]]>
     </summary>
     
   </entry>
