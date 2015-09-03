@@ -208,9 +208,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>iOS8新特性IBDesignable/IBInspectable，可以直接在XIB或者Storyboard中直接，设置UI类的属性。<br>例如：UIView.layer.borderWidth、borderColor、cornerRadius这些属性在XIB上是不能直接设置的，但是IBDesignable/IBInspectable，利用运行时机制，就可以把这些属性映射到XIB上了，同时，我们UI类的自定义属性也可以映射上去。关于过多的解释我就不多说了可以看看<a href="http://nshipster.cn/ibinspectable-ibdesignable/" target="_blank" rel="external">Nate Cook</a>撰写的。</p>
-<p>整篇都以View来介绍</p>
-<h2 id="Swift_IBDesignable/IBInspectable">Swift IBDesignable/IBInspectable</h2><p>首先我们得建一个ViewSwift类，View继承自UIView，选择Swift语言。</p>
+        <p>iOS8新特性IBDesignable/IBInspectable，可以直接在XIB或者Storyboard中直接，设置UI类的属性。<br>例如：UIView.layer.borderWidth、borderColor、cornerRadius这些属性在XIB上是不能直接设置的，但是IBDesignable/IBInspectable，利用运行时机制，就可以把这些属性映射到XIB上了，同时我们UI类的自定义属性也可以映射上去。关于过多的解释我就不多说了可以看看<a href="http://nshipster.cn/ibinspectable-ibdesignable/" target="_blank" rel="external">Nate Cook</a>撰写的。</p>
+<h2 id="以UIView的子类为例：">以UIView的子类为例：</h2><h2 id="Swift_IBDesignable/IBInspectable">Swift IBDesignable/IBInspectable</h2><p>首先我们得建一个ViewSwift类，View继承自UIView，选择Swift语言。</p>
 <pre><code class="bash">@IBDesignable
 class View: UIView {    
     @IBInspectable var cornerRadius: CGFloat = <span class="number">0.0</span> {
@@ -222,7 +221,7 @@ class View: UIView {
 
     @IBInspectable var borderColor: UIColor = <span class="function"><span class="title">UIColor</span></span>() {
         didSet {
-        layer.borderColor = borderColor.CGColor
+            layer.borderColor = borderColor.CGColor
         }
     }
 
@@ -261,7 +260,7 @@ class View: UIView {
     self.layer.borderWidth = _bwidth;
 }
 </code></pre>
-<p>效果跟上面Swift是一样一样的，我就不发图了，如果有疑问和建议，欢迎指导和提问。</p>
+<p>效果跟上面Swift是一样的，如果有疑问和建议，欢迎指导和提问。</p>
 
       
     </div>
