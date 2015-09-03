@@ -4,24 +4,24 @@
   <title><![CDATA[潘柏信]]></title>
   <subtitle><![CDATA[勤劳的小码农]]></subtitle>
   <link href="/atom.xml" rel="self"/>
-  <link href="https://avatars2.githubusercontent.com/u/11239874?v=3&s=460//"/>
+  <link href="leopardpan.github.io//"/>
   <updated>2015-09-03T07:23:07.000Z</updated>
-  <id>https://avatars2.githubusercontent.com/u/11239874?v=3&s=460//</id>
+  <id>leopardpan.github.io//</id>
   
   <author>
     <name><![CDATA[潘柏信]]></name>
-    
+    <email><![CDATA[panbaixin123@163.com]]></email>
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
     <title><![CDATA[在OC和Swift中使用IBDesignable/IBInspectable]]></title>
-    <link href="https://avatars2.githubusercontent.com/u/11239874?v=3&s=460/2015/09/03/%E5%9C%A8OC%E5%92%8CSwift%E4%B8%AD%E4%BD%BF%E7%94%A8IBDesignable-IBInspectable/"/>
-    <id>https://avatars2.githubusercontent.com/u/11239874?v=3&s=460/2015/09/03/在OC和Swift中使用IBDesignable-IBInspectable/</id>
+    <link href="leopardpan.github.io/2015/09/03/%E5%9C%A8OC%E5%92%8CSwift%E4%B8%AD%E4%BD%BF%E7%94%A8IBDesignable-IBInspectable/"/>
+    <id>leopardpan.github.io/2015/09/03/在OC和Swift中使用IBDesignable-IBInspectable/</id>
     <published>2015-09-03T05:33:45.000Z</published>
     <updated>2015-09-03T07:23:07.000Z</updated>
-    <content type="html"><![CDATA[<p>iOS8新特性IBDesignable/IBInspectable，可以直接在XIB或者Storyboard中直接，设置UI类的属性。<br>例如：UIView.layer.borderWidth、borderColor、cornerRadius这些属性在XIB上是不能直接设置的，但是IBDesignable/IBInspectable，利用运行时机制，就可以把这些属性映射到XIB上了，同时我们UI类的自定义属性也可以映射上去。关于过多的解释我就不多说了可以看看<a href="http://nshipster.cn/ibinspectable-ibdesignable/" target="_blank" rel="external">Nate Cook</a>撰写的。</p>
+    <content type="html"><![CDATA[<p>iOS8新特性IBDesignable/IBInspectable，可以直接在XIB或者Storyboard中直接，设置UI类的属性。<br>例如：UIView.layer.borderWidth、borderColor、cornerRadius这些属性在XIB上是不能直接设置的，但是IBDesignable/IBInspectable，利用运行时机制，就可以把这些属性映射到XIB上了，同时我们UI类的自定义属性也可以映射上去。关于过多的解释我就不多说了可以看看<a href="http://nshipster.cn/ibinspectable-ibdesignable/">Nate Cook</a>撰写的。</p>
 <h2 id="以UIView的子类为例：">以UIView的子类为例：</h2><h2 id="Swift_IBDesignable/IBInspectable">Swift IBDesignable/IBInspectable</h2><p>首先我们得建一个ViewSwift类，View继承自UIView，选择Swift语言。</p>
 <pre><code class="bash">@IBDesignable
 class View: UIView {    
@@ -83,16 +83,16 @@ class View: UIView {
   
   <entry>
     <title><![CDATA[HEXO]]></title>
-    <link href="https://avatars2.githubusercontent.com/u/11239874?v=3&s=460/2015/08/23/hexo/"/>
-    <id>https://avatars2.githubusercontent.com/u/11239874?v=3&s=460/2015/08/23/hexo/</id>
+    <link href="leopardpan.github.io/2015/08/23/hexo/"/>
+    <id>leopardpan.github.io/2015/08/23/hexo/</id>
     <published>2015-08-23T06:05:59.000Z</published>
     <updated>2015-08-23T06:05:59.000Z</updated>
     <content type="html"><![CDATA[<p>经过各种找资料，踩过何种坑，终于搭建好了hexo，域名目前用得时github的，我的hexo是3.1.1版本，hexo不同的版本，很多配置都不一样。好吧，废话不多说了，开始吧。</p>
-<h2 id="正文：">正文：</h2><p>这边教程是针对与Mac的，<a href="http://ibruce.info/2013/11/22/hexo-your-blog/?utm_source=tuicool" target="_blank" rel="external">参考链接</a>，由于原文讲到的hexo是以前的老版本，所以现在的版本配置的时候会有些改动。</p>
+<h2 id="正文：">正文：</h2><p>这边教程是针对与Mac的，<a href="http://ibruce.info/2013/11/22/hexo-your-blog/?utm_source=tuicool">参考链接</a>，由于原文讲到的hexo是以前的老版本，所以现在的版本配置的时候会有些改动。</p>
 <p>之前是想着写博客，一方面是给自己做笔记，可以提升自己的写作、总结能力，一个技术点我们会使用，并不难，但是要做到让让别人也能听懂我们讲得，还是需要一定的技巧和经验的。很多类似于CSDN、博客园也都可以写文章，但是页面的样式我，不是太喜欢，简书还算好点得。最近看到一些大神们的博客（在我的友情链接里有），貌似都是用hexo写得，我也依葫芦画瓢的搭建了一个。不罗嗦了，直接上搭建步骤。</p>
-<h2 id="配置环境">配置环境</h2><h3 id="安装Node（必须）">安装Node（必须）</h3><p>作用：用来生成静态页面的<br>到Node.js<a href="https://nodejs.org/" target="_blank" rel="external">官网</a>下载相应平台的最新版本，一路安装即可。</p>
+<h2 id="配置环境">配置环境</h2><h3 id="安装Node（必须）">安装Node（必须）</h3><p>作用：用来生成静态页面的<br>到Node.js<a href="https://nodejs.org/">官网</a>下载相应平台的最新版本，一路安装即可。</p>
 <h3 id="安装Git（必须）">安装Git（必须）</h3><p>作用：把本地的hexo内容提交到github上去.<br>安装Xcode就自带有Git，我就不多说了。</p>
-<h3 id="申请GitHub（必须）">申请GitHub（必须）</h3><p>作用：是用来做博客的远程创库、域名、服务器之类的，怎么与本地hexo建立连接等下讲。<br><a href="https://github.com/" target="_blank" rel="external">github</a>账号我也不再啰嗦了,没有的话直接申请就行了，跟一般的注册账号差不多，SSH Keys，看你自己了，可以不配制，不配置的话以后每次对自己的博客有改动提交的时候就要手动输入账号密码，配置了就不需要了，怎么配置我就不多说了，网上有很多教程。</p>
+<h3 id="申请GitHub（必须）">申请GitHub（必须）</h3><p>作用：是用来做博客的远程创库、域名、服务器之类的，怎么与本地hexo建立连接等下讲。<br><a href="https://github.com/">github</a>账号我也不再啰嗦了,没有的话直接申请就行了，跟一般的注册账号差不多，SSH Keys，看你自己了，可以不配制，不配置的话以后每次对自己的博客有改动提交的时候就要手动输入账号密码，配置了就不需要了，怎么配置我就不多说了，网上有很多教程。</p>
 <h3 id="正式安装HEXO">正式安装HEXO</h3><p>Node和Git都安装好后，可执行如下命令安装hexo：</p>
 <pre><code class="bash">sudo npm install -g hexo
 </code></pre>
@@ -115,17 +115,17 @@ class View: UIView {
 </code></pre>
 <h3 id="解决方法，执行命令：">解决方法，执行命令：</h3><pre><code class="bash">sudo npm install hexo-server
 </code></pre>
-<h2 id="二">二</h2><p>执行命令hexo server，有如下提示：<br>Usage: hexo<command><br>….<br>原因：<br>我认为是没有生成本地服务<br>解决方法，执行命令：</p>
+<h2 id="二">二</h2><p>执行命令hexo server，有如下提示：<br>Usage: hexo<Command><br>….<br>原因：<br>我认为是没有生成本地服务<br>解决方法，执行命令：</p>
 <pre><code class="bash">npm install hexo-server --save
 </code></pre>
-<p>提示：hexo-server@0.1.2 node_modules/hexo-server<br>….<br>表示成功了<a href="https://hexo.io/zh-cn/docs/server.html" target="_blank" rel="external">参考</a></p>
+<p>提示：hexo-server@0.1.2 node_modules/hexo-server<br>….<br>表示成功了<a href="https://hexo.io/zh-cn/docs/server.html">参考</a></p>
 <p>这个时候再执行：</p>
 <pre><code class="bash">hexo-server
 </code></pre>
 <p>得到:</p>
 <pre><code class="bash">INFO  Hexo is running at http://<span class="number">0.0</span>.<span class="number">0.0</span>:<span class="number">4000</span>/. Press Ctrl+C to stop.
 </code></pre>
-<p>这个时候再点击<a href="http://0.0.0.0:4000" target="_blank" rel="external">http://0.0.0.0:4000</a>，正常情况下应该是最原始的画面，但是我看到的是：<br>白板和Cannot GET /   几个字<br>原因：<br>由于2.6以后就更新了，我们需要手动配置些东西，我们需要输入下面三行命令：</p>
+<p>这个时候再点击<a href="http://0.0.0.0:4000">http://0.0.0.0:4000</a>，正常情况下应该是最原始的画面，但是我看到的是：<br>白板和Cannot GET /   几个字<br>原因：<br>由于2.6以后就更新了，我们需要手动配置些东西，我们需要输入下面三行命令：</p>
 <pre><code class="bash">npm install hexo-renderer-ejs --save
 </code></pre>
 <pre><code class="bash">npm install hexo-renderer-stylus --save
@@ -138,7 +138,7 @@ class View: UIView {
 <p>启动本地服务器：</p>
 <pre><code class="bash">hexo server （或hexo s）
 </code></pre>
-<p>再，点击网址<a href="http://0.0.0.0:4000" target="_blank" rel="external">http://0.0.0.0:4000</a> OK终于可以看到属于你自己的blog啦，😄，虽然很简陋，但好歹有了一个属于自己的小窝了。<a href="https://disqus.com/home/discussion/bsspirit/hexogithubweb/" target="_blank" rel="external">参考链接</a>，本地已经简单的设置好了，但是现在域名和服务器都是基于自己的电脑，接下来需要跟github进行关联。</p>
+<p>再，点击网址<a href="http://0.0.0.0:4000">http://0.0.0.0:4000</a> OK终于可以看到属于你自己的blog啦，😄，虽然很简陋，但好歹有了一个属于自己的小窝了。<a href="https://disqus.com/home/discussion/bsspirit/hexogithubweb/">参考链接</a>，本地已经简单的设置好了，但是现在域名和服务器都是基于自己的电脑，接下来需要跟github进行关联。</p>
 <h2 id="配置Github">配置Github</h2><h3 id="建立Repository">建立Repository</h3><p>建立与你用户名对应的仓库，仓库名必须为【your_user_name.github.io】，固定写法<br>然后建立关联，我的blog在本地/Users/leopard/blog，blog是我之前建的东西也全在这里面，有：</p>
 <pre><code class="bash">_config.yml    node_modules    public        <span class="built_in">source</span>
 db.json        package.json    scaffolds    themes
@@ -155,7 +155,7 @@ db.json        package.json    scaffolds    themes
 <p>网上会有很多说法，有的type是github, 还有repository 最后面的后缀也不一样，是github.com.git，我也踩了很多坑，我现在的版本是hexo: 3.1.1，执行命令hexo -vsersion就出来了,貌似3.0后全部改成我上面这种格式了。<br>忘了说了，我没用SSH Keys如果你用了SSH Keys的话直接在github里复制SSH的就行了，总共就两种协议，相信你懂的。<br>然后，执行配置命令：</p>
 <pre><code class="bash">hexo deploy
 </code></pre>
-<p>然后再浏览器中输入<a href="http://leopardpan.github.io/" target="_blank" rel="external">http://leopardpan.github.io/</a>就行了，我的github的账户叫leopardpan,把这个改成你github的账户名就行了</p>
+<p>然后再浏览器中输入<a href="http://leopardpan.github.io/">http://leopardpan.github.io/</a>就行了，我的github的账户叫leopardpan,把这个改成你github的账户名就行了</p>
 <h3 id="部署步骤">部署步骤</h3><p>每次部署的步骤，可按以下三步来进行。</p>
 <pre><code class="bash">hexo clean
 hexo generate
@@ -170,7 +170,7 @@ hexo deploy <span class="comment">#将.deploy目录部署到GitHub</span>
 hexo <span class="built_in">help</span>  <span class="comment"># 查看帮助</span>
 hexo version  <span class="comment">#查看Hexo的版本</span>
 </code></pre>
-<p>这里有大量的<a href="https://github.com/hexojs/hexo/wiki/Themes" target="_blank" rel="external">主题列表</a>使用方法里面<br>都有详细的介绍，我就不多说了。<br>我这里有几款个人认为不错的主题，免去你们，一个一个的选了，欢迎吐槽我的审美，😄<br><a href="https://github.com/daisygao/hexo-themes-cover" target="_blank" rel="external">Cover</a> - A chic theme with facebook-like cover photo<br><a href="https://github.com/henryhuang/oishi" target="_blank" rel="external">Oishi</a> - A white theme based on Landscape plus and Writing.<br><a href="https://github.com/hardywu/hexo-theme-sidebar" target="_blank" rel="external">Sidebar</a> - Another theme based on Light with a simple sidebar<br><a href="https://github.com/SuperKieran/TKL" target="_blank" rel="external">TKL</a> - A responsive design theme for Hexo. 一个设计优雅的响应式主题<br><a href="https://github.com/levonlin/Tinnypp" target="_blank" rel="external">Tinnypp</a> - A clean, simple theme based on Tinny<br><a href="https://github.com/yunlzheng/hexo-themes-writing" target="_blank" rel="external">Writing</a> - A small and simple hexo theme based on Light<br><a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="external">Yilia</a> - Responsive and simple style 优雅简洁响应式主题，我用得就是这个。<br><a href="https://github.com/Voidly/pacman" target="_blank" rel="external">Pacman voidy</a> - A theme with dynamic tagcloud and dynamic snow</p>
+<p>这里有大量的<a href="https://github.com/hexojs/hexo/wiki/Themes">主题列表</a>使用方法里面<br>都有详细的介绍，我就不多说了。<br>我这里有几款个人认为不错的主题，免去你们，一个一个的选了，欢迎吐槽我的审美，😄<br><a href="https://github.com/daisygao/hexo-themes-cover">Cover</a> - A chic theme with facebook-like cover photo<br><a href="https://github.com/henryhuang/oishi">Oishi</a> - A white theme based on Landscape plus and Writing.<br><a href="https://github.com/hardywu/hexo-theme-sidebar">Sidebar</a> - Another theme based on Light with a simple sidebar<br><a href="https://github.com/SuperKieran/TKL">TKL</a> - A responsive design theme for Hexo. 一个设计优雅的响应式主题<br><a href="https://github.com/levonlin/Tinnypp">Tinnypp</a> - A clean, simple theme based on Tinny<br><a href="https://github.com/yunlzheng/hexo-themes-writing">Writing</a> - A small and simple hexo theme based on Light<br><a href="https://github.com/litten/hexo-theme-yilia">Yilia</a> - Responsive and simple style 优雅简洁响应式主题，我用得就是这个。<br><a href="https://github.com/Voidly/pacman">Pacman voidy</a> - A theme with dynamic tagcloud and dynamic snow</p>
 <h2 id="一些基本路径">一些基本路径</h2><p>文章在source/_posts，如果你不怕麻烦的话可以跟我一样直接用vim去编辑，支持markdown语法，你有好的编辑软件，给我也推荐下，感激不尽😄。如果想修改头像可以直接在主题的_config.yml文件里面修改，友情链接，之类的都在这里，修改名字在public/index.html里修改，开始打理你的博客吧，有什么问题或者建议，都可以提出来，我会继续完善的。</p>
 <h3 id="修改头像，我当前的路径/Users/leopard/blog/themes/yilia，ls_你可以看到">修改头像，我当前的路径/Users/leopard/blog/themes/yilia，ls 你可以看到</h3><pre><code class="bash">Gruntfile.js    _config.yml    package.json
 README.md    layout        <span class="built_in">source</span>
@@ -190,8 +190,8 @@ theme: yilia
 提交 hexo d
 </code></pre>
 <p>你的主题，和名字就修改成功了</p>
-<h2 id="Markdown语法参考链接">Markdown语法参考链接</h2><p><a href="http://www.jianshu.com/p/1e402922ee32/" target="_blank" rel="external">链接一</a>（来自简书）<br><a href="http://www.cnblogs.com/hnrainll/p/3514637.html" target="_blank" rel="external">链接二</a>（来自博客园）<br><a href="http://www.bluesdream.com/blog/markdown-cheatsheet-syntax-manual.html" target="_blank" rel="external">链接三</a>（个人博客）<br><a href="http://ibruce.info/2013/11/26/markdown/" target="_blank" rel="external">链接四</a>（不如的个人博客）</p>
-<p>转载请注明原地址，潘柏信的博客：<a href="http://leopardpan.github.io/2015/08/12/postName/" target="_blank" rel="external">http://leopardpan.github.io/2015/08/12/postName/</a> 谢谢！</p>
+<h2 id="Markdown语法参考链接">Markdown语法参考链接</h2><p><a href="http://www.jianshu.com/p/1e402922ee32/">链接一</a>（来自简书）<br><a href="http://www.cnblogs.com/hnrainll/p/3514637.html">链接二</a>（来自博客园）<br><a href="http://www.bluesdream.com/blog/markdown-cheatsheet-syntax-manual.html">链接三</a>（个人博客）<br><a href="http://ibruce.info/2013/11/26/markdown/">链接四</a>（不如的个人博客）</p>
+<p>转载请注明原地址，潘柏信的博客：<a href="http://leopardpan.github.io/2015/08/12/postName/">http://leopardpan.github.io/2015/08/12/postName/</a> 谢谢！</p>
 ]]></content>
     <summary type="html">
     <![CDATA[<p>经过各种找资料，踩过何种坑，终于搭建好了hexo，域名目前用得时github的，我的hexo是3.1.1版本，hexo不同的版本，很多配置都不一样。好吧，废话不多说了，开始吧。</p>
@@ -202,47 +202,47 @@ theme: yilia
   
   <entry>
     <title><![CDATA[Blog]]></title>
-    <link href="https://avatars2.githubusercontent.com/u/11239874?v=3&s=460/2015/08/23/blog/"/>
-    <id>https://avatars2.githubusercontent.com/u/11239874?v=3&s=460/2015/08/23/blog/</id>
+    <link href="leopardpan.github.io/2015/08/23/blog/"/>
+    <id>leopardpan.github.io/2015/08/23/blog/</id>
     <published>2015-08-23T01:46:18.000Z</published>
     <updated>2015-08-23T06:26:16.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="iOS国内大神博客">iOS国内大神博客</h2><p><a href="http://www.devtang.com/blog/archives/" target="_blank" rel="external">唐巧</a><br>资深iOS开发者和Blogger，曾开发有道云笔记、猿题库和粉笔网的iOS客户端。他维护着iOS开发博客 <a href="http://www.devtang.com/" target="_blank" rel="external">http://www.devtang.com/</a> 和微信 iOS开发公众账号 iosDevTips，<a href="http://www.devtang.com/blog/2014/12/07/about-ios-pro-book/" target="_blank" rel="external">iOS开发进阶作者</a>、[iOS移动开发周报]<a href="http://www.devtang.com/blog/archives/" target="_blank" rel="external">唐巧</a>、<a href="http://engineering.yuantiku.com/blog/" target="_blank" rel="external">猿题库技术分享及系统架构</a>、<a href="https://github.com/yuantiku" target="_blank" rel="external">猿题库iOS团队</a>以及很多关于iOS的技术文章</p>
-<p>作者：<a href="http://onevcat.com/#blog" target="_blank" rel="external">王魏</a><br>喵神，一名来自中国的 iOS / Unity 开发者。现居日本，就职于 LINE。维护<a href="http://swifter.tips/" target="_blank" rel="external">swifter.tips</a>、<a href="https://github.com/onevcat/Kingfisher" target="_blank" rel="external">Kingfisher</a>SDWebImage瘦身版后的Swift版、<a href="http://objccn.io/" target="_blank" rel="external">ObjC 中国</a>的发起人、<a href="https://github.com/onevcat/VVDocumenter-Xcode" target="_blank" rel="external">VVDocumenter</a>的作者之一</p>
-<p><a href="http://nianxi.net/" target="_blank" rel="external">念茜</a> ，<a href="http://blog.csdn.net/yiyaaixuexi/" target="_blank" rel="external">念茜CSDN</a><br>念茜女神，精于iOS安全攻防，看了念茜女生的博客使你的app更安全</p>
-<p><a href="http://casatwy.com/" target="_blank" rel="external">田伟宇</a><br><a href="http://casatwy.com/" target="_blank" rel="external">iOS项目架构</a>、<a href="http://casatwy.com/index2.html" target="_blank" rel="external">LLDB调试</a>、<a href="http://casatwy.com/ku.html" target="_blank" rel="external">iOS静态库和动态库的分析及生成静态库</a></p>
+    <content type="html"><![CDATA[<h2 id="iOS国内大神博客">iOS国内大神博客</h2><p><a href="http://www.devtang.com/blog/archives/">唐巧</a><br>资深iOS开发者和Blogger，曾开发有道云笔记、猿题库和粉笔网的iOS客户端。他维护着iOS开发博客 <a href="http://www.devtang.com/">http://www.devtang.com/</a> 和微信 iOS开发公众账号 iosDevTips，<a href="http://www.devtang.com/blog/2014/12/07/about-ios-pro-book/">iOS开发进阶作者</a>、[iOS移动开发周报]<a href="http://www.devtang.com/blog/archives/">唐巧</a>、<a href="http://engineering.yuantiku.com/blog/">猿题库技术分享及系统架构</a>、<a href="https://github.com/yuantiku">猿题库iOS团队</a>以及很多关于iOS的技术文章</p>
+<p>作者：<a href="http://onevcat.com/#blog">王魏</a><br>喵神，一名来自中国的 iOS / Unity 开发者。现居日本，就职于 LINE。维护<a href="http://swifter.tips/">swifter.tips</a>、<a href="https://github.com/onevcat/Kingfisher">Kingfisher</a>SDWebImage瘦身版后的Swift版、<a href="http://objccn.io/">ObjC 中国</a>的发起人、<a href="https://github.com/onevcat/VVDocumenter-Xcode">VVDocumenter</a>的作者之一</p>
+<p><a href="http://nianxi.net/">念茜</a> ，<a href="http://blog.csdn.net/yiyaaixuexi/">念茜CSDN</a><br>念茜女神，精于iOS安全攻防，看了念茜女生的博客使你的app更安全</p>
+<p><a href="http://casatwy.com/">田伟宇</a><br><a href="http://casatwy.com/">iOS项目架构</a>、<a href="http://casatwy.com/index2.html">LLDB调试</a>、<a href="http://casatwy.com/ku.html">iOS静态库和动态库的分析及生成静态库</a></p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<h2 id="iOS国内大神博客">iOS国内大神博客</h2><p><a href="http://www.devtang.com/blog/archives/" target="_blank" rel="external">唐巧</a><br>资深iOS开发者和Blogge]]>
+    <![CDATA[<h2 id="iOS国内大神博客">iOS国内大神博客</h2><p><a href="http://www.devtang.com/blog/archives/">唐巧</a><br>资深iOS开发者和Blogger，曾开发有道云笔记、猿题库和粉笔网的iOS客户端。他维护着i]]>
     </summary>
     
   </entry>
   
   <entry>
     <title><![CDATA[Hello World]]></title>
-    <link href="https://avatars2.githubusercontent.com/u/11239874?v=3&s=460/2015/08/09/hello-world/"/>
-    <id>https://avatars2.githubusercontent.com/u/11239874?v=3&s=460/2015/08/09/hello-world/</id>
+    <link href="leopardpan.github.io/2015/08/09/hello-world/"/>
+    <id>leopardpan.github.io/2015/08/09/hello-world/</id>
     <published>2015-08-09T15:18:26.000Z</published>
     <updated>2015-08-09T15:18:26.000Z</updated>
-    <content type="html"><![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+    <content type="html"><![CDATA[<p>Welcome to <a href="http://hexo.io/">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
 <h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<p>More info: <a href="http://hexo.io/docs/writing.html">Writing</a></p>
 <h3 id="Run_server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<p>More info: <a href="http://hexo.io/docs/server.html">Server</a></p>
 <h3 id="Generate_static_files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<p>More info: <a href="http://hexo.io/docs/generating.html">Generating</a></p>
 <h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+<p>More info: <a href="http://hexo.io/docs/deployment.html">Deployment</a></p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io]]>
+    <![CDATA[<p>Welcome to <a href="http://hexo.io/">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/">documentation</a> for m]]>
     </summary>
     
   </entry>
   
   <entry>
     <title><![CDATA[postName]]></title>
-    <link href="https://avatars2.githubusercontent.com/u/11239874?v=3&s=460/2015/08/09/postName/"/>
-    <id>https://avatars2.githubusercontent.com/u/11239874?v=3&s=460/2015/08/09/postName/</id>
+    <link href="leopardpan.github.io/2015/08/09/postName/"/>
+    <id>leopardpan.github.io/2015/08/09/postName/</id>
     <published>2015-08-09T04:34:29.000Z</published>
     <updated>2015-08-24T15:15:59.000Z</updated>
     <content type="html"></content>
