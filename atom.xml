@@ -5,7 +5,7 @@
   <subtitle><![CDATA[勤劳的小码农]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="https://avatars2.githubusercontent.com/u/11239874?v=3&s=460//"/>
-  <updated>2015-08-23T06:05:59.000Z</updated>
+  <updated>2015-09-03T07:02:34.000Z</updated>
   <id>https://avatars2.githubusercontent.com/u/11239874?v=3&s=460//</id>
   
   <author>
@@ -14,6 +14,73 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[在OC和Swift中使用IBDesignable/IBInspectable]]></title>
+    <link href="https://avatars2.githubusercontent.com/u/11239874?v=3&s=460/2015/09/03/%E5%9C%A8OC%E5%92%8CSwift%E4%B8%AD%E4%BD%BF%E7%94%A8IBDesignable-IBInspectable/"/>
+    <id>https://avatars2.githubusercontent.com/u/11239874?v=3&s=460/2015/09/03/在OC和Swift中使用IBDesignable-IBInspectable/</id>
+    <published>2015-09-03T05:33:45.000Z</published>
+    <updated>2015-09-03T07:02:34.000Z</updated>
+    <content type="html"><![CDATA[<p>iOS8新特性IBDesignable/IBInspectable，可以直接在XIB或者Storyboard中直接，设置UI类的属性。<br>例如：UIView.layer.borderWidth、borderColor、cornerRadius这些属性在XIB上是不能直接设置的，但是IBDesignable/IBInspectable，利用运行时机制，就可以把这些属性映射到XIB上了，同时，我们UI类的自定义属性也可以映射上去。关于过多的解释我就不多说了可以看看<a href="http://nshipster.cn/ibinspectable-ibdesignable/" target="_blank" rel="external">Nate Cook</a>撰写的。</p>
+<p>整篇都以View来介绍</p>
+<h2 id="Swift_IBDesignable/IBInspectable">Swift IBDesignable/IBInspectable</h2><p>首先我们得建一个ViewSwift类，View继承自UIView，选择Swift语言。</p>
+<pre><code class="bash">@IBDesignable
+class View: UIView {    
+    @IBInspectable var cornerRadius: CGFloat = <span class="number">0.0</span> {
+        didSet {
+            layer.cornerRadius = cornerRadius
+            layer.masksToBounds = <span class="literal">true</span>
+        }
+    }
+
+    @IBInspectable var borderColor: UIColor = <span class="function"><span class="title">UIColor</span></span>() {
+        didSet {
+        layer.borderColor = borderColor.CGColor
+        }
+    }
+
+    @IBInspectable var borderWidth: CGFloat = <span class="number">0.0</span> {
+        didSet {
+            layer.borderWidth = borderWidth
+        }
+    }
+}
+</code></pre>
+<p>然后在XIB或Storyboard里面，拖一个UIView上去，把class改成自己定义的View<br><img src="https://bytebucket.org/leopardpan/images/raw/85140d959a75e5da1d8a0d28a0bd27bcce5ae322/1.png?token=b7a45ac5634659cf6ad6530cae0cc9ed70308882" alt=""><br>然后点击旁边的属性编辑，就可以看到我们动态加载上去的属性，直接修改就可以了，XIB上的View也会跟随变化。<br><img src="https://bytebucket.org/leopardpan/images/raw/85140d959a75e5da1d8a0d28a0bd27bcce5ae322/2.png?token=11f901163034988c2daa43dc4d7e113aa3560d71" alt=""><br>我们就可以看到一个UIView的子类变成了这样<br><img src="https://bytebucket.org/leopardpan/images/raw/45e0f5f1e5a313286ab81957b55715755f1d5732/3.png?token=8aa7a81d49b217c954a91824cd670ebc3ba6c877" alt=""></p>
+<h2 id="Objective-C_IBDesignable/IBInspectable">Objective-C IBDesignable/IBInspectable</h2><p>建一个ViewOC类，ViewOC继承自UIView，选择Objective-C语言，在.h里面声明属性</p>
+<pre><code class="bash">@property (nonatomic, assign)IBInspectable CGFloat cornerRadius;
+@property (nonatomic, assign)IBInspectable CGFloat bwidth;
+@property (nonatomic, assign)IBInspectable UIColor *bcolor;
+</code></pre>
+<p>注意：IBInspectable修饰的位置。</p>
+<p>然后再.m文件里面，@implementation前面用IB_DESIGNABLE修饰。</p>
+<pre><code class="bash">IB_DESIGNABLE
+@implementation ViewOC
+</code></pre>
+<p>然后再set方法里面去赋值就OK了，如下：</p>
+<pre><code class="bash">- (void)<span class="built_in">set</span>CornerRadius:(CGFloat)cornerRadius{
+    _cornerRadius = cornerRadius;
+    self.layer.cornerRadius  = _cornerRadius;
+    self.layer.masksToBounds = YES;
+}
+
+- (void)<span class="built_in">set</span>Bcolor:(UIColor *)bcolor{
+    _bcolor = bcolor;
+    self.layer.borderColor = _bcolor.CGColor;
+}
+
+- (void)<span class="built_in">set</span>Bwidth:(CGFloat)bwidth {
+    _bwidth = bwidth;
+    self.layer.borderWidth = _bwidth;
+}
+</code></pre>
+<p>效果跟上面Swift是一样一样的，我就不发图了，如果有疑问和建议，欢迎指导和提问。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>iOS8新特性IBDesignable/IBInspectable，可以直接在XIB或者Storyboard中直接，设置UI类的属性。<br>例如：UIView.layer.borderWidth、borderColor、cornerRadius这些属性在XIB上是不能直接]]>
+    </summary>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[HEXO]]></title>
