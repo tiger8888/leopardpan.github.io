@@ -3,21 +3,27 @@
 <head>
   <meta charset="utf-8">
   
-  <title>在OC和Swift中使用IBDesignable/IBInspectable | 潘柏信</title>
+  <title>单元测试 | 潘柏信</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="iOS8新特性IBDesignable/IBInspectable，可以直接在XIB或者Storyboard中直接，设置UI类的属性。例如：UIView.layer.borderWidth、borderColor、cornerRadius这些属性在XIB上是不能直接设置的，但是IBDesignable/IBInspectable，利用运行时机制，就可以把这些属性映射到XIB上了，同时我们UI类的自">
+  <meta name="description" content="XCTest
+简介：内嵌到Xcode的测试框架，从Xcode5开始XCTest一直跟随着Xcode。参考资料： XCTest测试实战、单元测试XCTest
+使用：每一个名字中以“test”开始的方法被标识用来测试，并且将会评估函数中的所有断言来决定是否通过或者失败，想测试什么直接编写就行了，Command + U 所有的测试都将被执行一遍。测试失败将会被红色警告断住，成功为绿色。
+功能：测试和UI">
 <meta property="og:type" content="article">
-<meta property="og:title" content="在OC和Swift中使用IBDesignable/IBInspectable">
-<meta property="og:url" content="leopardpan.github.io/2015/09/03/在OC和Swift中使用IBDesignable-IBInspectable/index.html">
+<meta property="og:title" content="单元测试">
+<meta property="og:url" content="leopardpan.github.io/2015/09/14/单元测试/index.html">
 <meta property="og:site_name" content="潘柏信">
-<meta property="og:description" content="iOS8新特性IBDesignable/IBInspectable，可以直接在XIB或者Storyboard中直接，设置UI类的属性。例如：UIView.layer.borderWidth、borderColor、cornerRadius这些属性在XIB上是不能直接设置的，但是IBDesignable/IBInspectable，利用运行时机制，就可以把这些属性映射到XIB上了，同时我们UI类的自">
-<meta property="og:image" content="https://bytebucket.org/leopardpan/images/raw/85140d959a75e5da1d8a0d28a0bd27bcce5ae322/1.png?token=b7a45ac5634659cf6ad6530cae0cc9ed70308882">
-<meta property="og:image" content="https://bytebucket.org/leopardpan/images/raw/85140d959a75e5da1d8a0d28a0bd27bcce5ae322/2.png?token=11f901163034988c2daa43dc4d7e113aa3560d71">
-<meta property="og:image" content="https://bytebucket.org/leopardpan/images/raw/45e0f5f1e5a313286ab81957b55715755f1d5732/3.png?token=8aa7a81d49b217c954a91824cd670ebc3ba6c877">
-<meta property="og:updated_time" content="2015-09-03T07:23:07.000Z">
+<meta property="og:description" content="XCTest
+简介：内嵌到Xcode的测试框架，从Xcode5开始XCTest一直跟随着Xcode。参考资料： XCTest测试实战、单元测试XCTest
+使用：每一个名字中以“test”开始的方法被标识用来测试，并且将会评估函数中的所有断言来决定是否通过或者失败，想测试什么直接编写就行了，Command + U 所有的测试都将被执行一遍。测试失败将会被红色警告断住，成功为绿色。
+功能：测试和UI">
+<meta property="og:updated_time" content="2015-09-14T15:57:24.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="在OC和Swift中使用IBDesignable/IBInspectable">
-<meta name="twitter:description" content="iOS8新特性IBDesignable/IBInspectable，可以直接在XIB或者Storyboard中直接，设置UI类的属性。例如：UIView.layer.borderWidth、borderColor、cornerRadius这些属性在XIB上是不能直接设置的，但是IBDesignable/IBInspectable，利用运行时机制，就可以把这些属性映射到XIB上了，同时我们UI类的自">
+<meta name="twitter:title" content="单元测试">
+<meta name="twitter:description" content="XCTest
+简介：内嵌到Xcode的测试框架，从Xcode5开始XCTest一直跟随着Xcode。参考资料： XCTest测试实战、单元测试XCTest
+使用：每一个名字中以“test”开始的方法被标识用来测试，并且将会评估函数中的所有断言来决定是否通过或者失败，想测试什么直接编写就行了，Command + U 所有的测试都将被执行一遍。测试失败将会被红色警告断住，成功为绿色。
+功能：测试和UI">
   
     <link rel="alternative" href="/atom.xml" title="潘柏信" type="application/atom+xml">
   
@@ -189,11 +195,11 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-在OC和Swift中使用IBDesignable-IBInspectable" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-单元测试" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/09/03/在OC和Swift中使用IBDesignable-IBInspectable/" class="article-date">
-  	<time datetime="2015-09-03T05:33:45.000Z" itemprop="datePublished">2015-09-03</time>
+      <a href="/2015/09/14/单元测试/" class="article-date">
+  	<time datetime="2015-09-14T15:30:42.000Z" itemprop="datePublished">2015-09-14</time>
 </a>
     </div>
   
@@ -206,7 +212,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      在OC和Swift中使用IBDesignable/IBInspectable
+      单元测试
     </h1>
   
 
@@ -222,60 +228,27 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>iOS8新特性IBDesignable/IBInspectable，可以直接在XIB或者Storyboard中直接，设置UI类的属性。<br>例如：UIView.layer.borderWidth、borderColor、cornerRadius这些属性在XIB上是不能直接设置的，但是IBDesignable/IBInspectable，利用运行时机制，就可以把这些属性映射到XIB上了，同时我们UI类的自定义属性也可以映射上去。关于过多的解释我就不多说了可以看看<a href="http://nshipster.cn/ibinspectable-ibdesignable/">Nate Cook</a>撰写的。</p>
-<h2 id="以UIView的子类为例：">以UIView的子类为例：</h2><h2 id="Swift_IBDesignable/IBInspectable">Swift IBDesignable/IBInspectable</h2><p>首先我们得建一个ViewSwift类，View继承自UIView，选择Swift语言。</p>
-<pre><code class="bash">@IBDesignable
-class View: UIView {    
-    @IBInspectable var cornerRadius: CGFloat = <span class="number">0.0</span> {
-        didSet {
-            layer.cornerRadius = cornerRadius
-            layer.masksToBounds = <span class="literal">true</span>
-        }
-    }
-
-    @IBInspectable var borderColor: UIColor = <span class="function"><span class="title">UIColor</span></span>() {
-        didSet {
-            layer.borderColor = borderColor.CGColor
-        }
-    }
-
-    @IBInspectable var borderWidth: CGFloat = <span class="number">0.0</span> {
-        didSet {
-            layer.borderWidth = borderWidth
-        }
-    }
-}
+        <p><a href="https://developer.apple.com/library/prerelease/ios/documentation/DeveloperTools/Conceptual/testing_with_xcode/chapters/03-testing_basics.html">XCTest</a></p>
+<h2 id="简介：">简介：</h2><p>内嵌到Xcode的测试框架，从Xcode5开始XCTest一直跟随着Xcode。参考资料： XCTest测试实战、单元测试XCTest</p>
+<h2 id="使用：">使用：</h2><p>每一个名字中以“test”开始的方法被标识用来测试，并且将会评估函数中的所有断言来决定是否通过或者失败，想测试什么直接编写就行了，Command + U 所有的测试都将被执行一遍。测试失败将会被红色警告断住，成功为绿色。</p>
+<h2 id="功能：">功能：</h2><p>测试和UI是完全分开的，测试只能被执行一遍。使用XCTest Crash后，可以直接跟踪显示Crash的原因（我之前写过demo是这样）</p>
+<p><a href="https://developer.apple.com/library/prerelease/ios/documentation/DeveloperTools/Conceptual/testing_with_xcode/chapters/03-testing_basics.html">GHUnit</a></p>
+<h2 id="简介：-1">简介：</h2><p>Github上一个开源的测试框架，由两个作者开发和维护，貌似已经停止维护了（大多数是2年前更新的，只有两个文件是7个月前更新的）。GHunit很多功能都是模仿XCTest的，但是有了UI，不管是测试，还是观测日志都很方便。</p>
+<h2 id="使用：-1">使用：</h2><p>需要新建Target，然后再main.m里把app delegate给修改成 GHUnitIOSAppDelegate，然后修改 Build Settings-Other Linker Flags，添加-ObjC 、-all_load，把原来的AppDelegate及出main.m以外的删掉，Xcode自带的TestCase一定要删除。每一个名字中以“test”开始的方法被标识用来测试，直接写测试代码就行了。</p>
+<h2 id="功能：-1">功能：</h2><p>UI界面，支持重复测试，跟踪断点、捕获并显示测试细节、按照关键字查找测试案例、显示堆栈和调试信息。有多种宏输出Log到UI上，对于Analytics的网络请求及请求时长的测试，不是很方便。</p>
+<p><a href="https://code.facebook.com/projects/359440610825631/xctool/">XCTool</a></p>
+<h2 id="简介：-2">简介：</h2><p>XCTool是facebook在<a href="https://github.com/facebook/xctool">Github</a>开源的一个iOS编译和测试的工具，它是一个纯命令行工具，xctool替换了<a href="https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/xcodebuild.1.html">xcodebuild</a>。使用终端cd到你的项目的根目录下，执行命令就行了。</p>
+<h2 id="使用：-2">使用：</h2><p>1、<a href="https://github.com/facebook/xctool">Github</a>上有使用说明及功能介绍，建议结合我们提示使用。<br>2、brew install xctool，   如果没有安装brew可以参考<a href="http://www.cnblogs.com/leopardsnow/p/4629774.html">brew安装</a><br>3、 执行测试测试</p>
+<pre><code class="bash">xctool -project demoName.xcodeproj -scheme schemeName <span class="built_in">test</span>
 </code></pre>
-<p>然后在XIB或Storyboard里面，拖一个UIView上去，把class改成自己定义的View<br><img src="https://bytebucket.org/leopardpan/images/raw/85140d959a75e5da1d8a0d28a0bd27bcce5ae322/1.png?token=b7a45ac5634659cf6ad6530cae0cc9ed70308882" alt=""><br>然后点击旁边的属性编辑，就可以看到我们动态加载上去的属性，直接修改就可以了，XIB上的View也会跟随变化。<br><img src="https://bytebucket.org/leopardpan/images/raw/85140d959a75e5da1d8a0d28a0bd27bcce5ae322/2.png?token=11f901163034988c2daa43dc4d7e113aa3560d71" alt=""><br>我们就可以看到一个UIView的子类变成了这样<br><img src="https://bytebucket.org/leopardpan/images/raw/45e0f5f1e5a313286ab81957b55715755f1d5732/3.png?token=8aa7a81d49b217c954a91824cd670ebc3ba6c877" alt=""></p>
-<h2 id="Objective-C_IBDesignable/IBInspectable">Objective-C IBDesignable/IBInspectable</h2><p>建一个ViewOC类，ViewOC继承自UIView，选择Objective-C语言，在.h里面声明属性</p>
-<pre><code class="bash">@property (nonatomic, assign)IBInspectable CGFloat cornerRadius;
-@property (nonatomic, assign)IBInspectable CGFloat bwidth;
-@property (nonatomic, assign)IBInspectable UIColor *bcolor;
+<h2 id="功能：-2">功能：</h2><p>1、目前了解：可以测试整个项目启动时所需要执行的所有过程，有执行时间<br>2、可以把测试写入了本地，方便查看</p>
+<pre><code class="bash">xctool -project demoname.xcodeproj -scheme schemeName -reporter plain:/文件路径及名字（如~/plain-output.txt）
 </code></pre>
-<p>注意：IBInspectable修饰的位置。</p>
-<p>然后再.m文件里面，@implementation前面用IB_DESIGNABLE修饰。</p>
-<pre><code class="bash">IB_DESIGNABLE
-@implementation ViewOC
+<p>3、测试单独的方法，每次都需要执行命令</p>
+<pre><code>xctool -project demo.xcodeproj -scheme demo test -only <span class="constant">SomeTestTarget</span><span class="symbol">:SomeTestClass/testSomemethod</span>
+</code></pre><p>4、支持各种模拟器下测试</p>
+<pre><code><span class="tag">xctool</span> <span class="tag">-project</span> <span class="tag">demoName</span><span class="class">.xcodeproj</span> <span class="tag">-scheme</span> <span class="tag">schemeName</span> <span class="tag">test</span> <span class="tag">-test-sdk</span> <span class="tag">iphonesimulator8</span><span class="class">.1</span>
 </code></pre>
-<p>然后再set方法里面去赋值就OK了，如下：</p>
-<pre><code class="bash">- (void)<span class="built_in">set</span>CornerRadius:(CGFloat)cornerRadius{
-    _cornerRadius = cornerRadius;
-    self.layer.cornerRadius  = _cornerRadius;
-    self.layer.masksToBounds = YES;
-}
-
-- (void)<span class="built_in">set</span>Bcolor:(UIColor *)bcolor{
-    _bcolor = bcolor;
-    self.layer.borderColor = _bcolor.CGColor;
-}
-
-- (void)<span class="built_in">set</span>Bwidth:(CGFloat)bwidth {
-    _bwidth = bwidth;
-    self.layer.borderWidth = _bwidth;
-}
-</code></pre>
-<p>效果跟上面Swift是一样的，如果有疑问和建议，欢迎指导和提问。</p>
-
       
     </div>
     
@@ -284,18 +257,9 @@ class View: UIView {
     
 <nav id="article-nav">
   
-    <a href="/2015/09/13/关于HTTPS/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          关于HTTPS
-        
-      </div>
-    </a>
   
-  
-    <a href="/2015/08/23/hexo/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">HEXO</div>
+    <a href="/2015/09/13/关于HTTPS/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">关于HTTPS</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -324,7 +288,7 @@ class View: UIView {
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="在OC和Swift中使用IBDesignable-IBInspectable" data-title="在OC和Swift中使用IBDesignable/IBInspectable" data-url="leopardpan.github.io/2015/09/03/在OC和Swift中使用IBDesignable-IBInspectable/"></div>
+	<div class="ds-thread" data-thread-key="单元测试" data-title="单元测试" data-url="leopardpan.github.io/2015/09/14/单元测试/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
