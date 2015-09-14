@@ -5,25 +5,22 @@
   
   <title>单元测试 | 潘柏信</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="XCTest
-简介：内嵌到Xcode的测试框架，从Xcode5开始XCTest一直跟随着Xcode。参考资料： XCTest测试实战、单元测试XCTest
+  <meta name="description" content="XCTest简介：内嵌到Xcode的测试框架，从Xcode5开始XCTest一直跟随着Xcode。参考资料： XCTest测试实战、单元测试XCTest
 使用：每一个名字中以“test”开始的方法被标识用来测试，并且将会评估函数中的所有断言来决定是否通过或者失败，想测试什么直接编写就行了，Command + U 所有的测试都将被执行一遍。测试失败将会被红色警告断住，成功为绿色。
-功能：测试和UI">
+功能：测试和UI是">
 <meta property="og:type" content="article">
 <meta property="og:title" content="单元测试">
 <meta property="og:url" content="leopardpan.github.io/2015/09/14/单元测试/index.html">
 <meta property="og:site_name" content="潘柏信">
-<meta property="og:description" content="XCTest
-简介：内嵌到Xcode的测试框架，从Xcode5开始XCTest一直跟随着Xcode。参考资料： XCTest测试实战、单元测试XCTest
+<meta property="og:description" content="XCTest简介：内嵌到Xcode的测试框架，从Xcode5开始XCTest一直跟随着Xcode。参考资料： XCTest测试实战、单元测试XCTest
 使用：每一个名字中以“test”开始的方法被标识用来测试，并且将会评估函数中的所有断言来决定是否通过或者失败，想测试什么直接编写就行了，Command + U 所有的测试都将被执行一遍。测试失败将会被红色警告断住，成功为绿色。
-功能：测试和UI">
-<meta property="og:updated_time" content="2015-09-14T15:57:24.000Z">
+功能：测试和UI是">
+<meta property="og:updated_time" content="2015-09-14T16:00:09.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="单元测试">
-<meta name="twitter:description" content="XCTest
-简介：内嵌到Xcode的测试框架，从Xcode5开始XCTest一直跟随着Xcode。参考资料： XCTest测试实战、单元测试XCTest
+<meta name="twitter:description" content="XCTest简介：内嵌到Xcode的测试框架，从Xcode5开始XCTest一直跟随着Xcode。参考资料： XCTest测试实战、单元测试XCTest
 使用：每一个名字中以“test”开始的方法被标识用来测试，并且将会评估函数中的所有断言来决定是否通过或者失败，想测试什么直接编写就行了，Command + U 所有的测试都将被执行一遍。测试失败将会被红色警告断住，成功为绿色。
-功能：测试和UI">
+功能：测试和UI是">
   
     <link rel="alternative" href="/atom.xml" title="潘柏信" type="application/atom+xml">
   
@@ -228,20 +225,17 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><a href="https://developer.apple.com/library/prerelease/ios/documentation/DeveloperTools/Conceptual/testing_with_xcode/chapters/03-testing_basics.html">XCTest</a></p>
-<h2 id="简介：">简介：</h2><p>内嵌到Xcode的测试框架，从Xcode5开始XCTest一直跟随着Xcode。参考资料： XCTest测试实战、单元测试XCTest</p>
-<h2 id="使用：">使用：</h2><p>每一个名字中以“test”开始的方法被标识用来测试，并且将会评估函数中的所有断言来决定是否通过或者失败，想测试什么直接编写就行了，Command + U 所有的测试都将被执行一遍。测试失败将会被红色警告断住，成功为绿色。</p>
-<h2 id="功能：">功能：</h2><p>测试和UI是完全分开的，测试只能被执行一遍。使用XCTest Crash后，可以直接跟踪显示Crash的原因（我之前写过demo是这样）</p>
-<p><a href="https://developer.apple.com/library/prerelease/ios/documentation/DeveloperTools/Conceptual/testing_with_xcode/chapters/03-testing_basics.html">GHUnit</a></p>
-<h2 id="简介：-1">简介：</h2><p>Github上一个开源的测试框架，由两个作者开发和维护，貌似已经停止维护了（大多数是2年前更新的，只有两个文件是7个月前更新的）。GHunit很多功能都是模仿XCTest的，但是有了UI，不管是测试，还是观测日志都很方便。</p>
-<h2 id="使用：-1">使用：</h2><p>需要新建Target，然后再main.m里把app delegate给修改成 GHUnitIOSAppDelegate，然后修改 Build Settings-Other Linker Flags，添加-ObjC 、-all_load，把原来的AppDelegate及出main.m以外的删掉，Xcode自带的TestCase一定要删除。每一个名字中以“test”开始的方法被标识用来测试，直接写测试代码就行了。</p>
-<h2 id="功能：-1">功能：</h2><p>UI界面，支持重复测试，跟踪断点、捕获并显示测试细节、按照关键字查找测试案例、显示堆栈和调试信息。有多种宏输出Log到UI上，对于Analytics的网络请求及请求时长的测试，不是很方便。</p>
-<p><a href="https://code.facebook.com/projects/359440610825631/xctool/">XCTool</a></p>
-<h2 id="简介：-2">简介：</h2><p>XCTool是facebook在<a href="https://github.com/facebook/xctool">Github</a>开源的一个iOS编译和测试的工具，它是一个纯命令行工具，xctool替换了<a href="https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/xcodebuild.1.html">xcodebuild</a>。使用终端cd到你的项目的根目录下，执行命令就行了。</p>
-<h2 id="使用：-2">使用：</h2><p>1、<a href="https://github.com/facebook/xctool">Github</a>上有使用说明及功能介绍，建议结合我们提示使用。<br>2、brew install xctool，   如果没有安装brew可以参考<a href="http://www.cnblogs.com/leopardsnow/p/4629774.html">brew安装</a><br>3、 执行测试测试</p>
+        <h2 id="XCTest"><a href="https://developer.apple.com/library/prerelease/ios/documentation/DeveloperTools/Conceptual/testing_with_xcode/chapters/03-testing_basics.html">XCTest</a></h2><h2 id="简介：">简介：</h2><p>内嵌到Xcode的测试框架，从Xcode5开始XCTest一直跟随着Xcode。参考资料： XCTest测试实战、单元测试XCTest</p>
+<h3 id="使用：">使用：</h3><p>每一个名字中以“test”开始的方法被标识用来测试，并且将会评估函数中的所有断言来决定是否通过或者失败，想测试什么直接编写就行了，Command + U 所有的测试都将被执行一遍。测试失败将会被红色警告断住，成功为绿色。</p>
+<h3 id="功能：">功能：</h3><p>测试和UI是完全分开的，测试只能被执行一遍。使用XCTest Crash后，可以直接跟踪显示Crash的原因（我之前写过demo是这样）</p>
+<h2 id="GHUnit"><a href="https://developer.apple.com/library/prerelease/ios/documentation/DeveloperTools/Conceptual/testing_with_xcode/chapters/03-testing_basics.html">GHUnit</a></h2><h3 id="简介：-1">简介：</h3><p>Github上一个开源的测试框架，由两个作者开发和维护，貌似已经停止维护了（大多数是2年前更新的，只有两个文件是7个月前更新的）。GHunit很多功能都是模仿XCTest的，但是有了UI，不管是测试，还是观测日志都很方便。</p>
+<h3 id="使用：-1">使用：</h3><p>需要新建Target，然后再main.m里把app delegate给修改成 GHUnitIOSAppDelegate，然后修改 Build Settings-Other Linker Flags，添加-ObjC 、-all_load，把原来的AppDelegate及出main.m以外的删掉，Xcode自带的TestCase一定要删除。每一个名字中以“test”开始的方法被标识用来测试，直接写测试代码就行了。</p>
+<h3 id="功能：-1">功能：</h3><p>UI界面，支持重复测试，跟踪断点、捕获并显示测试细节、按照关键字查找测试案例、显示堆栈和调试信息。有多种宏输出Log到UI上，对于Analytics的网络请求及请求时长的测试，不是很方便。</p>
+<h2 id="XCTool"><a href="https://code.facebook.com/projects/359440610825631/xctool/">XCTool</a></h2><h3 id="简介：-2">简介：</h3><p>XCTool是facebook在<a href="https://github.com/facebook/xctool">Github</a>开源的一个iOS编译和测试的工具，它是一个纯命令行工具，xctool替换了<a href="https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/xcodebuild.1.html">xcodebuild</a>。使用终端cd到你的项目的根目录下，执行命令就行了。</p>
+<h3 id="使用：-2">使用：</h3><p>1、<a href="https://github.com/facebook/xctool">Github</a>上有使用说明及功能介绍，建议结合我们提示使用。<br>2、brew install xctool，   如果没有安装brew可以参考<a href="http://www.cnblogs.com/leopardsnow/p/4629774.html">brew安装</a><br>3、 执行测试测试</p>
 <pre><code class="bash">xctool -project demoName.xcodeproj -scheme schemeName <span class="built_in">test</span>
 </code></pre>
-<h2 id="功能：-2">功能：</h2><p>1、目前了解：可以测试整个项目启动时所需要执行的所有过程，有执行时间<br>2、可以把测试写入了本地，方便查看</p>
+<h3 id="功能：-2">功能：</h3><p>1、目前了解：可以测试整个项目启动时所需要执行的所有过程，有执行时间<br>2、可以把测试写入了本地，方便查看</p>
 <pre><code class="bash">xctool -project demoname.xcodeproj -scheme schemeName -reporter plain:/文件路径及名字（如~/plain-output.txt）
 </code></pre>
 <p>3、测试单独的方法，每次都需要执行命令</p>
