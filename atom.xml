@@ -5,7 +5,7 @@
   <subtitle><![CDATA[勤劳的小码农]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="leopardpan.github.io//"/>
-  <updated>2015-09-22T13:59:41.000Z</updated>
+  <updated>2015-09-22T14:02:37.000Z</updated>
   <id>leopardpan.github.io//</id>
   
   <author>
@@ -20,12 +20,10 @@
     <link href="leopardpan.github.io/2015/09/22/iOS9%E7%9A%84%E5%8F%98%E5%8C%96/"/>
     <id>leopardpan.github.io/2015/09/22/iOS9的变化/</id>
     <published>2015-09-22T13:06:23.000Z</published>
-    <updated>2015-09-22T13:59:41.000Z</updated>
+    <updated>2015-09-22T14:02:37.000Z</updated>
     <content type="html"><![CDATA[<p>这里将介绍下我们日常开发一些从iOS8过度到iOS9给我们带来的一些变化，及解决方法。</p>
-<h2 id="信息收集"><font color="cd6600">信息收集</font></h2><pre><code>language：<span class="function"><span class="title">zh-Hans</span><span class="params">(iOS8)</span></span>  ——&gt;  <span class="function"><span class="title">zh-Hans-CN</span><span class="params">(iOS9)</span></span>
-所有的进程列表都获取不到了
-调用私有API&lt;<span class="attribute">font</span> <span class="attribute">color</span>=<span class="string">"008b00"</span>&gt;FrontBoard.framework&lt;/<span class="attribute">font</span>&gt;可以获取到，但是有风险
-</code></pre><h2 id="App_Transport_Security"><font color="cd6600">App Transport Security</font></h2><p>iOS9和OS X El Capitan的一个新特性，App Transport Security 的目地是提高Apple 操作系统的安全性以及在此操作系统上运行的任何应用的安全性。ATS是苹果针对与 NSURL这一层做的封装，iOS9后ATS默认是开启的，即网络传输需要使用HTTPS。如果想在iOS9后继续使用HTTP的话，有两条路可以走：<br>    1、在Info.plist中添加NSAppTransportSecurity类型Dictionary，在NSAppTransportSecurity下添加NSAllowsArbitraryLoads，Boolean为YES。<br>    2、直接使用CFNetwork做网络请求，ASIHTTPRequest就是基于CFNetwotk做的封装，如果有需求的同学可以看看ASI里面的源码，如果某个时间段你又想要使用HTTPS的话，ASI对SSL/TSL的证书验证有点问题，证书验证还得自己封装一下才行。刚才我说道，ATS是苹果针对与NSURL这一层做的封装，所以我们使用CFNetwork或者更底层做网络请求的话是不受ATS限制的。</p>
+<h2 id="信息收集"><font color="cd6600">信息收集</font></h2><p>language：zh-Hans(iOS8)  ——&gt;  zh-Hans-CN(iOS9)<br>所有的进程列表都获取不到了<br>调用私有API<font color="008b00">FrontBoard.framework</font>可以获取到，但是有风险</p>
+<h2 id="App_Transport_Security"><font color="cd6600">App Transport Security</font></h2><p>iOS9和OS X El Capitan的一个新特性，App Transport Security 的目地是提高Apple 操作系统的安全性以及在此操作系统上运行的任何应用的安全性。ATS是苹果针对与 NSURL这一层做的封装，iOS9后ATS默认是开启的，即网络传输需要使用HTTPS。如果想在iOS9后继续使用HTTP的话，有两条路可以走：<br>    1、在Info.plist中添加NSAppTransportSecurity类型Dictionary，在NSAppTransportSecurity下添加NSAllowsArbitraryLoads，Boolean为YES。<br>    2、直接使用CFNetwork做网络请求，ASIHTTPRequest就是基于CFNetwotk做的封装，如果有需求的同学可以看看ASI里面的源码，如果某个时间段你又想要使用HTTPS的话，ASI对SSL/TSL的证书验证有点问题，证书验证还得自己封装一下才行。刚才我说道，ATS是苹果针对与NSURL这一层做的封装，所以我们使用CFNetwork或者更底层做网络请求的话是不受ATS限制的。</p>
 <p>移除了discoveryd DNS解析服务<br>iPhone升级到iOS8后WiFi有时候会有问题，特别是Mac升级到OS X Yosemite后，时而电脑休眠唤醒唬就连不上WiFi，有时候还突然掉线，经常要手动去关闭WiFi在重新连接，这是因为苹果到了OS X Yosemite系统后，把之前的mDNSResponder换成了discoveryd DNS。iOS9和OS X Yosemite10.4后mDNSResponder又回来了。<br>mDNSResponder： 苹果以前一直使用控制DNS和Bonjour服务的一种进程。<br>discoveryd：OS X Yosemite后苹果新出的一种进程。</p>
 <h2 id="App_Thinning"><font color="cd6600">App Thinning</font></h2><p>App Thinning是一个关于节省iOS设备存储空间的功能，它可以让iOS设备在安装、更新及运行App等场景中仅下载所需的资源，减少App的占用空间，从而节省设备的存储空间。</p>
 <h3 id="App_Thinning主要有三个机制："><font color="cd6600">App Thinning主要有三个机制：</font></h3><pre><code>1、Slicing： 开发者把<span class="keyword">App</span>安装包上传到AppStore后，Apple服务会自动对安装包切割为不同的应用变体(<span class="keyword">App</span> variant)， 当用户下载安装包时，系统会根据设备型号下载安装对应的单个应用变体。
@@ -59,7 +57,7 @@
 ]]></content>
     <summary type="html">
     <![CDATA[<p>这里将介绍下我们日常开发一些从iOS8过度到iOS9给我们带来的一些变化，及解决方法。</p>
-<h2 id="信息收集"><font color="cd6600">信息收集</font></h2><pre><code>language：<span class="funct]]>
+<h2 id="信息收集"><font color="cd6600">信息收集</font></h2><p>language：zh-Hans(iOS8)  ——&gt;  zh-]]>
     </summary>
     
   </entry>
