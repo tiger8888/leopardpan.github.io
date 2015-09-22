@@ -5,7 +5,7 @@
   <subtitle><![CDATA[勤劳的小码农]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="leopardpan.github.io//"/>
-  <updated>2015-09-22T13:56:52.000Z</updated>
+  <updated>2015-09-22T13:59:41.000Z</updated>
   <id>leopardpan.github.io//</id>
   
   <author>
@@ -20,10 +20,18 @@
     <link href="leopardpan.github.io/2015/09/22/iOS9%E7%9A%84%E5%8F%98%E5%8C%96/"/>
     <id>leopardpan.github.io/2015/09/22/iOS9的变化/</id>
     <published>2015-09-22T13:06:23.000Z</published>
-    <updated>2015-09-22T13:56:52.000Z</updated>
+    <updated>2015-09-22T13:59:41.000Z</updated>
     <content type="html"><![CDATA[<p>这里将介绍下我们日常开发一些从iOS8过度到iOS9给我们带来的一些变化，及解决方法。</p>
-<h2 id="信息收集"><font color="cd6600">信息收集</font></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">language：zh-Hans(iOS8)  ——&gt;  zh-Hans-CN(iOS9)</span><br><span class="line">所有的进程列表都获取不到了</span><br><span class="line">调用私有API&lt;font color=<span class="string">"008b00"</span>&gt;FrontBoard.framework&lt;/font&gt;可以获取到，但是有风险</span><br><span class="line">``` </span><br><span class="line"><span class="comment">## &lt;font color="cd6600"&gt;App Transport Security&lt;/font&gt;</span></span><br><span class="line"></span><br><span class="line">iOS9和OS X El Capitan的一个新特性，App Transport Security 的目地是提高Apple 操作系统的安全性以及在此操作系统上运行的任何应用的安全性。ATS是苹果针对与 NSURL这一层做的封装，iOS9后ATS默认是开启的，即网络传输需要使用HTTPS。如果想在iOS9后继续使用HTTP的话，有两条路可以走：</span><br><span class="line">``` bash</span><br><span class="line"><span class="number">1</span>、在Info.plist中添加NSAppTransportSecurity类型Dictionary，在NSAppTransportSecurity下添加NSAllowsArbitraryLoads，Boolean为YES。</span><br><span class="line"><span class="number">2</span>、直接使用CFNetwork做网络请求，ASIHTTPRequest就是基于CFNetwotk做的封装，如果有需求的同学可以看看ASI里面的源码，如果某个时间段你又想要使用HTTPS的话，ASI对SSL/TSL的证书验证有点问题，证书验证还得自己封装一下才行。刚才我说道，ATS是苹果针对与NSURL这一层做的封装，所以我们使用CFNetwork或者更底层做网络请求的话是不受ATS限制的。</span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line">移除了discoveryd DNS解析服务</span><br><span class="line">iPhone升级到iOS8后WiFi有时候会有问题，特别是Mac升级到OS X Yosemite后，时而电脑休眠唤醒唬就连不上WiFi，有时候还突然掉线，经常要手动去关闭WiFi在重新连接，这是因为苹果到了OS X Yosemite系统后，把之前的mDNSResponder换成了discoveryd DNS。iOS9和OS X Yosemite10.<span class="number">4</span>后mDNSResponder又回来了。</span><br><span class="line">mDNSResponder： 苹果以前一直使用控制DNS和Bonjour服务的一种进程。</span><br><span class="line">discoveryd：OS X Yosemite后苹果新出的一种进程。</span><br><span class="line"></span><br><span class="line"><span class="comment">## &lt;font color="cd6600"&gt;App Thinning&lt;/font&gt;</span></span><br><span class="line">App Thinning是一个关于节省iOS设备存储空间的功能，它可以让iOS设备在安装、更新及运行App等场景中仅下载所需的资源，减少App的占用空间，从而节省设备的存储空间。</span><br><span class="line"></span><br><span class="line"><span class="comment">### &lt;font color="cd6600"&gt;App Thinning主要有三个机制：&lt;/font&gt;</span></span><br><span class="line">``` bash</span><br><span class="line"><span class="number">1</span>、Slicing： 开发者把App安装包上传到AppStore后，Apple服务会自动对安装包切割为不同的应用变体(App variant)， 当用户下载安装包时，系统会根据设备型号下载安装对应的单个应用变体。</span><br><span class="line"><span class="number">2</span>、On-Demand Resources： ORD(随需资源)是指开发者对资源添加标签上传后，系统会根据App运行的情况，动态下载并加载所需资源，而在存储空间不足时，自动删除这类资源。</span><br><span class="line"><span class="number">3</span>、Bitcode：开启Bitcode编译后，可以使得开发者上传App时只需上传Intermediate Representation(中间件)，而非最终的可执行二进制文件。 在用户下载App之前，AppStore会自动编译中间件，产生设备所需的执行文件供用户下载安装。</span><br></pre></td></tr></table></figure>
-<p>其中，Bitcode的机制可以支持动态的进行App Slicing，而对于Apple未来进行硬件升级的措施，此机制可以保证在开发者不重新发布版本的情况下而兼容新的设备。Xcode7默认是开始了Bitcode，如果不想使用可以手动关闭Bitcode：</p>
+<h2 id="信息收集"><font color="cd6600">信息收集</font></h2><pre><code>language：<span class="function"><span class="title">zh-Hans</span><span class="params">(iOS8)</span></span>  ——&gt;  <span class="function"><span class="title">zh-Hans-CN</span><span class="params">(iOS9)</span></span>
+所有的进程列表都获取不到了
+调用私有API&lt;<span class="attribute">font</span> <span class="attribute">color</span>=<span class="string">"008b00"</span>&gt;FrontBoard.framework&lt;/<span class="attribute">font</span>&gt;可以获取到，但是有风险
+</code></pre><h2 id="App_Transport_Security"><font color="cd6600">App Transport Security</font></h2><p>iOS9和OS X El Capitan的一个新特性，App Transport Security 的目地是提高Apple 操作系统的安全性以及在此操作系统上运行的任何应用的安全性。ATS是苹果针对与 NSURL这一层做的封装，iOS9后ATS默认是开启的，即网络传输需要使用HTTPS。如果想在iOS9后继续使用HTTP的话，有两条路可以走：<br>    1、在Info.plist中添加NSAppTransportSecurity类型Dictionary，在NSAppTransportSecurity下添加NSAllowsArbitraryLoads，Boolean为YES。<br>    2、直接使用CFNetwork做网络请求，ASIHTTPRequest就是基于CFNetwotk做的封装，如果有需求的同学可以看看ASI里面的源码，如果某个时间段你又想要使用HTTPS的话，ASI对SSL/TSL的证书验证有点问题，证书验证还得自己封装一下才行。刚才我说道，ATS是苹果针对与NSURL这一层做的封装，所以我们使用CFNetwork或者更底层做网络请求的话是不受ATS限制的。</p>
+<p>移除了discoveryd DNS解析服务<br>iPhone升级到iOS8后WiFi有时候会有问题，特别是Mac升级到OS X Yosemite后，时而电脑休眠唤醒唬就连不上WiFi，有时候还突然掉线，经常要手动去关闭WiFi在重新连接，这是因为苹果到了OS X Yosemite系统后，把之前的mDNSResponder换成了discoveryd DNS。iOS9和OS X Yosemite10.4后mDNSResponder又回来了。<br>mDNSResponder： 苹果以前一直使用控制DNS和Bonjour服务的一种进程。<br>discoveryd：OS X Yosemite后苹果新出的一种进程。</p>
+<h2 id="App_Thinning"><font color="cd6600">App Thinning</font></h2><p>App Thinning是一个关于节省iOS设备存储空间的功能，它可以让iOS设备在安装、更新及运行App等场景中仅下载所需的资源，减少App的占用空间，从而节省设备的存储空间。</p>
+<h3 id="App_Thinning主要有三个机制："><font color="cd6600">App Thinning主要有三个机制：</font></h3><pre><code>1、Slicing： 开发者把<span class="keyword">App</span>安装包上传到AppStore后，Apple服务会自动对安装包切割为不同的应用变体(<span class="keyword">App</span> variant)， 当用户下载安装包时，系统会根据设备型号下载安装对应的单个应用变体。
+2、<span class="keyword">On</span>-Demand Resources： ORD(随需资源)是指开发者对资源添加标签上传后，系统会根据<span class="keyword">App</span>运行的情况，动态下载并加载所需资源，而在存储空间不足时，自动删除这类资源。
+3、Bitcode：开启Bitcode编译后，可以使得开发者上传<span class="keyword">App</span>时只需上传Intermediate Representation(中间件)，而非最终的可执行二进制文件。 在用户下载<span class="keyword">App</span>之前，AppStore会自动编译中间件，产生设备所需的执行文件供用户下载安装。
+</code></pre><p>其中，Bitcode的机制可以支持动态的进行App Slicing，而对于Apple未来进行硬件升级的措施，此机制可以保证在开发者不重新发布版本的情况下而兼容新的设备。Xcode7默认是开始了Bitcode，如果不想使用可以手动关闭Bitcode：</p>
 <pre><code class="bash">选择项目——&gt;点击Target——&gt;点击Build Setttings——&gt;搜索栏里搜bitcode——&gt;把Enable Bitcode对应的Yes改成No。
 </code></pre>
 <p>启用Bitcode编译机制，需要注意以下几点：</p>
@@ -51,7 +59,7 @@
 ]]></content>
     <summary type="html">
     <![CDATA[<p>这里将介绍下我们日常开发一些从iOS8过度到iOS9给我们带来的一些变化，及解决方法。</p>
-<h2 id="信息收集"><font color="cd6600">信息收集</font></h2><figure class="highlight bash"><table>]]>
+<h2 id="信息收集"><font color="cd6600">信息收集</font></h2><pre><code>language：<span class="funct]]>
     </summary>
     
   </entry>
