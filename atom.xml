@@ -5,7 +5,7 @@
   <subtitle><![CDATA[勤劳的小码农]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="leopardpan.github.io//"/>
-  <updated>2015-09-23T14:37:21.000Z</updated>
+  <updated>2015-09-23T14:40:16.000Z</updated>
   <id>leopardpan.github.io//</id>
   
   <author>
@@ -16,11 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title><![CDATA[<font color="cd6600">iPad Multitasking</font>]]></title>
+    <title><![CDATA[iPad Multitasking]]></title>
     <link href="leopardpan.github.io/2015/09/23/iPad-Multitasking/"/>
     <id>leopardpan.github.io/2015/09/23/iPad-Multitasking/</id>
     <published>2015-09-23T14:13:28.000Z</published>
-    <updated>2015-09-23T14:37:21.000Z</updated>
+    <updated>2015-09-23T14:40:16.000Z</updated>
     <content type="html"><![CDATA[<h2 id="iOS9_iPad分屏多任务操作教程">iOS9 iPad分屏多任务操作教程</h2><h2 id="@iPad用户："><font color="cd6600">@iPad用户</font>：</h2><h2 id="SlideOver："><font color="cd6600">SlideOver</font>：</h2><p><font color="cd6600">简介</font>：iPad简单分屏功能，左侧原来的App占据屏幕的70%面积，右侧是30%，右侧App出来后进入活跃状态，左侧的App，所有基本活动将中断，但是并没有进入后台。</p>
 <p><font color="cd6600">适用机型</font>：iPad air以及iPad mini2以后的所有机型</p>
 <p><font color="cd6600">使用方法</font>：从屏幕右侧边缘轻扫，默认会打开上次打开过得App，顶部有一个Home键，往下拉可以展示所有可以展示的App。</p>
@@ -51,11 +51,11 @@
   </entry>
   
   <entry>
-    <title><![CDATA[<font color="cd6600">iOS9的变化</font>]]></title>
+    <title><![CDATA[iOS9的变化]]></title>
     <link href="leopardpan.github.io/2015/09/22/iOS9%E7%9A%84%E5%8F%98%E5%8C%96/"/>
     <id>leopardpan.github.io/2015/09/22/iOS9的变化/</id>
     <published>2015-09-22T13:06:23.000Z</published>
-    <updated>2015-09-23T14:37:08.000Z</updated>
+    <updated>2015-09-23T14:40:05.000Z</updated>
     <content type="html"><![CDATA[<p>这里将介绍下我们日常开发一些从iOS8过度到iOS9给我们带来的一些变化，及解决方法。</p>
 <h2 id="信息收集"><font color="cd6600">信息收集</font></h2><p>language：zh-Hans(iOS8)  ——&gt;  zh-Hans-CN(iOS9)<br>所有的进程列表都获取不到了<br>调用私有API<font color="008b00">FrontBoard.framework</font>可以获取到，但是有风险</p>
 <h2 id="App_Transport_Security"><font color="cd6600">App Transport Security</font></h2><p>iOS9和OS X El Capitan的一个新特性，App Transport Security 的目地是提高Apple 操作系统的安全性以及在此操作系统上运行的任何应用的安全性。ATS是苹果针对与 NSURL这一层做的封装，iOS9后ATS默认是开启的，即网络传输需要使用HTTPS。如果想在iOS9后继续使用HTTP的话，有两条路可以走：<br>    1、在Info.plist中添加NSAppTransportSecurity类型Dictionary，在NSAppTransportSecurity下添加NSAllowsArbitraryLoads，Boolean为YES。<br>    2、直接使用CFNetwork做网络请求，ASIHTTPRequest就是基于CFNetwotk做的封装，如果有需求的同学可以看看ASI里面的源码，如果某个时间段你又想要使用HTTPS的话，ASI对SSL/TSL的证书验证有点问题，证书验证还得自己封装一下才行。刚才我说道，ATS是苹果针对与NSURL这一层做的封装，所以我们使用CFNetwork或者更底层做网络请求的话是不受ATS限制的。</p>
