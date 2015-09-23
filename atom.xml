@@ -104,7 +104,7 @@
     <link href="leopardpan.github.io/2015/09/14/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/"/>
     <id>leopardpan.github.io/2015/09/14/单元测试/</id>
     <published>2015-09-14T15:30:42.000Z</published>
-    <updated>2015-09-23T15:07:52.000Z</updated>
+    <updated>2015-09-23T15:10:11.000Z</updated>
     <content type="html"><![CDATA[<h2 id="XCTest"><a href="https://developer.apple.com/library/prerelease/ios/documentation/DeveloperTools/Conceptual/testing_with_xcode/chapters/03-testing_basics.html">XCTest</a></h2><h2 id="简介：">简介：</h2><p>内嵌到Xcode的测试框架，从Xcode5开始XCTest一直跟随着Xcode。参考资料： XCTest测试实战、单元测试XCTest</p>
 <h3 id="使用：">使用：</h3><p>每一个名字中以“test”开始的方法被标识用来测试，并且将会评估函数中的所有断言来决定是否通过或者失败，想测试什么直接编写就行了，Command + U 所有的测试都将被执行一遍。测试失败将会被红色警告断住，成功为绿色。</p>
 <h3 id="功能：">功能：</h3><p>测试和UI是完全分开的，测试只能被执行一遍。使用XCTest Crash后，可以直接跟踪显示Crash的原因（我之前写过demo是这样）</p>
@@ -127,8 +127,6 @@
     <![CDATA[<h2 id="XCTest"><a href="https://developer.apple.com/library/prerelease/ios/documentation/DeveloperTools/Conceptual/testing_with_xcode/chapt]]>
     </summary>
     
-      <category term="Test" scheme="leopardpan.github.io/tags/Test/"/>
-    
   </entry>
   
   <entry>
@@ -136,7 +134,7 @@
     <link href="leopardpan.github.io/2015/09/03/%E5%9C%A8OC%E5%92%8CSwift%E4%B8%AD%E4%BD%BF%E7%94%A8IBDesignable-IBInspectable/"/>
     <id>leopardpan.github.io/2015/09/03/在OC和Swift中使用IBDesignable-IBInspectable/</id>
     <published>2015-09-03T05:33:45.000Z</published>
-    <updated>2015-09-23T15:06:30.000Z</updated>
+    <updated>2015-09-23T15:10:20.000Z</updated>
     <content type="html"><![CDATA[<p>iOS8新特性IBDesignable/IBInspectable，可以直接在XIB或者Storyboard中直接，设置UI类的属性。<br>例如：UIView.layer.borderWidth、borderColor、cornerRadius这些属性在XIB上是不能直接设置的，但是IBDesignable/IBInspectable，利用运行时机制，就可以把这些属性映射到XIB上了，同时我们UI类的自定义属性也可以映射上去。关于过多的解释我就不多说了可以看看<a href="http://nshipster.cn/ibinspectable-ibdesignable/">Nate Cook</a>撰写的。</p>
 <h2 id="以UIView的子类为例：">以UIView的子类为例：</h2><h2 id="Swift_IBDesignable/IBInspectable">Swift IBDesignable/IBInspectable</h2><p>首先我们得建一个ViewSwift类，View继承自UIView，选择Swift语言。</p>
 <pre><code class="bash">@IBDesignable
@@ -194,8 +192,6 @@ class View: UIView {
     <summary type="html">
     <![CDATA[<p>iOS8新特性IBDesignable/IBInspectable，可以直接在XIB或者Storyboard中直接，设置UI类的属性。<br>例如：UIView.layer.borderWidth、borderColor、cornerRadius这些属性在XIB上是不能直接]]>
     </summary>
-    
-      <category term="iOS8" scheme="leopardpan.github.io/tags/iOS8/"/>
     
   </entry>
   
