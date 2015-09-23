@@ -115,7 +115,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						
+						<a href="/tags/iOS9/" style="font-size: 10px;">iOS9</a>
 					</div>
 				</section>
 				
@@ -186,6 +186,80 @@
 	</div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-iPad-Multitasking" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/09/23/iPad-Multitasking/" class="article-date">
+  	<time datetime="2015-09-23T14:13:28.000Z" itemprop="datePublished">2015-09-23</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/09/23/iPad-Multitasking/">iPad Multitasking</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="iOS9_iPad分屏多任务操作教程">iOS9 iPad分屏多任务操作教程</h2><h2 id="@iPad用户："><font color="cd6600">@iPad用户</font>：</h2><h2 id="SlideOver："><font color="cd6600">SlideOver</font>：</h2><p><font color="cd6600">简介</font>：iPad简单分屏功能，左侧原来的App占据屏幕的70%面积，右侧是30%，右侧App出来后进入活跃状态，左侧的App，所有基本活动将中断，但是并没有进入后台。</p>
+<p><font color="cd6600">适用机型</font>：iPad air以及iPad mini2以后的所有机型</p>
+<p><font color="cd6600">使用方法</font>：从屏幕右侧边缘轻扫，默认会打开上次打开过得App，顶部有一个Home键，往下拉可以展示所有可以展示的App。</p>
+<h2 id="SplitView："><font color="cd6600">SplitView</font>：</h2><p><font color="cd6600">简介</font>：iPad分屏功能，允许两个应用在同一屏幕上显示，需要平板有足够强大的CPU和足够的内存来保证两款应用的流畅度。</p>
+<p><font color="cd6600">适用机型</font>：iPad Air2，苹果官网（去年更新的）显示仅有iPad Air2支持这一功能</p>
+<p><font color="cd6600">使用方法</font>：首先要经过SlideOver，如果你的是iPad Air2，你再轻扫后，两个App的中间的竖线有个白色半透明的条，点击这个条就会激活 SplitView，然后拖拽这个条就可以变换两个App的在屏幕里的大小了。</p>
+<h2 id="Pictuer_in_Picture："><font color="cd6600">Pictuer in Picture</font>：</h2><p><font color="cd6600">简介</font>： 画中画（PiP）功能，让用户查看一个悬浮的App，只占据屏幕的一小部分面积。如果同时也在使用分屏功能的话，那么在同一屏幕可以同时使用三个App。</p>
+<p><font color="cd6600">适用机型</font>：iPad air以及iPad mini2以后的机型</p>
+<p><font color="cd6600">使用方法</font>：例如现在你在看视频，然后按下Home键，当前的视频就会悬浮在屏幕上。</p>
+<h2 id="@Developer_User:"><font color="cd6600">@Developer User</font>:</h2><p>如果App是在Xcode7以前的环境开发的，要提供一个LaunchScreen.storyboard文件，不要使用之前的默认启动图片，Xcode6创建的项目自带的是LaunchScreen.Xib，Xcode7创建的项目会自带LaunchScreen.storyboard。</p>
+<h2 id="SlideOver：-1"><font color="cd6600">SlideOver</font>：</h2><p>Demo在左侧：当右侧App出来的时候，左侧的将会被蒙上蒙版，正常活动将被终止，并没有进入后台</p>
+<p><font color="cd6600">调用方法</font>：<br>1、applicationWillResignActive：（右侧App出来）<br>2、applicationDidBecomeActive：（右侧App消失）<br>Demo SDK在右侧：自己从右侧出现的时候，相当于把一个App重新打开和后台挂起<br>1.1、didFinishLaunchingWithOptions：（如果Demo没有启动过，Demo出现）<br>1.2、applicationWillEnterForeground：（如果Demo之前是挂在后台，Demo出现）<br>2、applicationDidBecomeActive：（Demo完全出现）<br>3、 applicationWillResignActive：（Demo自己消失）</p>
+<p>4、 applicationDidEnterBackground：（Demo完全自己消失）</p>
+<h2 id="SplitView：-1"><font color="cd6600">SplitView</font>：</h2><p>Demo 在左侧：<br>1、applicationWillResignActive：（右侧App出来，此时只相当于SlideOver效果）<br>2、applicationDidBecomeActive：（SplitView效果）</p>
+<p>点击中间的小竖线激活SplitView<br>每次调整都会调用这两个方法<br>3、applicationWillResignActive：（调整两个App在屏幕中的位置，开始拖动）<br>4、applicationDidBecomeActive：（调整两个App在屏幕中的位置，拖动结束）</p>
+<p>右边的App把Demo的完全挤出屏幕<br>5、applicationWillResignActive：（调整两个App在屏幕中的位置，开始拖动）<br>6、applicationDidEnterBackground：（Demo完全消失在屏幕）</p>
+<p>Demo在右侧：<br>1.1、didFinishLaunchingWithOptions：（如果Demo没有启动过，Demo出现）<br>1.2、applicationWillEnterForeground：（如果Demo之前是挂在后台，Demo出现）<br>2、applicationDidBecomeActive：（Demo出现）</p>
+<p>每次调整都会调用这两个方法<br>3、applicationWillResignActive：（调整两个App在屏幕中的位置，开始拖动）<br>4、applicationDidBecomeActive：（调整两个App在屏幕中的位置，拖动结束）</p>
+<h2 id="Pictuer_in_Picture：-1"><font color="cd6600">Pictuer in Picture</font>：</h2><p>集成画中画这个功能，需要应用做PiP功能的支持，测试暂时放置</p>
+<p>参考资料：<br><a href="https://developer.apple.com/library/ios/documentation/WindowsViews/Conceptual/AdoptingMultitaskingOniPad/QuickStartForSlideOverAndSplitView.html#//apple_ref/doc/uid/TP40015145-CH13-SW1">官网</a> 、 <a href="http://www.macrumors.com/2015/09/16/ios-9-split-screen-multitasking-ipad/">Split-Screen Multitasking for the iPad</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS9/">iOS9</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
   
     <article id="post-iOS9的变化" class="article article-type-post" itemscope itemprop="blogPost">
   

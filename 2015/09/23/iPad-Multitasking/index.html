@@ -3,21 +3,24 @@
 <head>
   <meta charset="utf-8">
   
-  <title>在OC和Swift中使用IBDesignable/IBInspectable | 潘柏信</title>
+  <title>iPad Multitasking | 潘柏信</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="iOS8新特性IBDesignable/IBInspectable，可以直接在XIB或者Storyboard中直接，设置UI类的属性。例如：UIView.layer.borderWidth、borderColor、cornerRadius这些属性在XIB上是不能直接设置的，但是IBDesignable/IBInspectable，利用运行时机制，就可以把这些属性映射到XIB上了，同时我们UI类的自">
+  <meta name="description" content="iOS9 iPad分屏多任务操作教程@iPad用户：SlideOver：简介：iPad简单分屏功能，左侧原来的App占据屏幕的70%面积，右侧是30%，右侧App出来后进入活跃状态，左侧的App，所有基本活动将中断，但是并没有进入后台。
+适用机型：iPad air以及iPad mini2以后的所有机型
+使用方法：从屏幕右侧边缘轻扫，默认会打开上次打开过得App，顶部有一个Home键，往下拉可以展示">
 <meta property="og:type" content="article">
-<meta property="og:title" content="在OC和Swift中使用IBDesignable/IBInspectable">
-<meta property="og:url" content="leopardpan.github.io/2015/09/03/在OC和Swift中使用IBDesignable-IBInspectable/index.html">
+<meta property="og:title" content="iPad Multitasking">
+<meta property="og:url" content="leopardpan.github.io/2015/09/23/iPad-Multitasking/index.html">
 <meta property="og:site_name" content="潘柏信">
-<meta property="og:description" content="iOS8新特性IBDesignable/IBInspectable，可以直接在XIB或者Storyboard中直接，设置UI类的属性。例如：UIView.layer.borderWidth、borderColor、cornerRadius这些属性在XIB上是不能直接设置的，但是IBDesignable/IBInspectable，利用运行时机制，就可以把这些属性映射到XIB上了，同时我们UI类的自">
-<meta property="og:image" content="https://bytebucket.org/leopardpan/images/raw/85140d959a75e5da1d8a0d28a0bd27bcce5ae322/1.png?token=b7a45ac5634659cf6ad6530cae0cc9ed70308882">
-<meta property="og:image" content="https://bytebucket.org/leopardpan/images/raw/85140d959a75e5da1d8a0d28a0bd27bcce5ae322/2.png?token=11f901163034988c2daa43dc4d7e113aa3560d71">
-<meta property="og:image" content="https://bytebucket.org/leopardpan/images/raw/45e0f5f1e5a313286ab81957b55715755f1d5732/3.png?token=8aa7a81d49b217c954a91824cd670ebc3ba6c877">
-<meta property="og:updated_time" content="2015-09-03T07:23:07.000Z">
+<meta property="og:description" content="iOS9 iPad分屏多任务操作教程@iPad用户：SlideOver：简介：iPad简单分屏功能，左侧原来的App占据屏幕的70%面积，右侧是30%，右侧App出来后进入活跃状态，左侧的App，所有基本活动将中断，但是并没有进入后台。
+适用机型：iPad air以及iPad mini2以后的所有机型
+使用方法：从屏幕右侧边缘轻扫，默认会打开上次打开过得App，顶部有一个Home键，往下拉可以展示">
+<meta property="og:updated_time" content="2015-09-23T14:27:50.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="在OC和Swift中使用IBDesignable/IBInspectable">
-<meta name="twitter:description" content="iOS8新特性IBDesignable/IBInspectable，可以直接在XIB或者Storyboard中直接，设置UI类的属性。例如：UIView.layer.borderWidth、borderColor、cornerRadius这些属性在XIB上是不能直接设置的，但是IBDesignable/IBInspectable，利用运行时机制，就可以把这些属性映射到XIB上了，同时我们UI类的自">
+<meta name="twitter:title" content="iPad Multitasking">
+<meta name="twitter:description" content="iOS9 iPad分屏多任务操作教程@iPad用户：SlideOver：简介：iPad简单分屏功能，左侧原来的App占据屏幕的70%面积，右侧是30%，右侧App出来后进入活跃状态，左侧的App，所有基本活动将中断，但是并没有进入后台。
+适用机型：iPad air以及iPad mini2以后的所有机型
+使用方法：从屏幕右侧边缘轻扫，默认会打开上次打开过得App，顶部有一个Home键，往下拉可以展示">
   
     <link rel="alternative" href="/atom.xml" title="潘柏信" type="application/atom+xml">
   
@@ -189,11 +192,11 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-在OC和Swift中使用IBDesignable-IBInspectable" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-iPad-Multitasking" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/09/03/在OC和Swift中使用IBDesignable-IBInspectable/" class="article-date">
-  	<time datetime="2015-09-03T05:33:45.000Z" itemprop="datePublished">2015-09-03</time>
+      <a href="/2015/09/23/iPad-Multitasking/" class="article-date">
+  	<time datetime="2015-09-23T14:13:28.000Z" itemprop="datePublished">2015-09-23</time>
 </a>
     </div>
   
@@ -206,7 +209,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      在OC和Swift中使用IBDesignable/IBInspectable
+      iPad Multitasking
     </h1>
   
 
@@ -214,6 +217,10 @@
       
       <div class="article-info article-info-post">
         
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS9/">iOS9</a></li></ul>
+	</div>
+
         
 
         <div class="clearfix"></div>
@@ -222,59 +229,26 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>iOS8新特性IBDesignable/IBInspectable，可以直接在XIB或者Storyboard中直接，设置UI类的属性。<br>例如：UIView.layer.borderWidth、borderColor、cornerRadius这些属性在XIB上是不能直接设置的，但是IBDesignable/IBInspectable，利用运行时机制，就可以把这些属性映射到XIB上了，同时我们UI类的自定义属性也可以映射上去。关于过多的解释我就不多说了可以看看<a href="http://nshipster.cn/ibinspectable-ibdesignable/">Nate Cook</a>撰写的。</p>
-<h2 id="以UIView的子类为例：">以UIView的子类为例：</h2><h2 id="Swift_IBDesignable/IBInspectable">Swift IBDesignable/IBInspectable</h2><p>首先我们得建一个ViewSwift类，View继承自UIView，选择Swift语言。</p>
-<pre><code class="bash">@IBDesignable
-class View: UIView {    
-    @IBInspectable var cornerRadius: CGFloat = <span class="number">0.0</span> {
-        didSet {
-            layer.cornerRadius = cornerRadius
-            layer.masksToBounds = <span class="literal">true</span>
-        }
-    }
-
-    @IBInspectable var borderColor: UIColor = <span class="function"><span class="title">UIColor</span></span>() {
-        didSet {
-            layer.borderColor = borderColor.CGColor
-        }
-    }
-
-    @IBInspectable var borderWidth: CGFloat = <span class="number">0.0</span> {
-        didSet {
-            layer.borderWidth = borderWidth
-        }
-    }
-}
-</code></pre>
-<p>然后在XIB或Storyboard里面，拖一个UIView上去，把class改成自己定义的View<br><img src="https://bytebucket.org/leopardpan/images/raw/85140d959a75e5da1d8a0d28a0bd27bcce5ae322/1.png?token=b7a45ac5634659cf6ad6530cae0cc9ed70308882" alt=""><br>然后点击旁边的属性编辑，就可以看到我们动态加载上去的属性，直接修改就可以了，XIB上的View也会跟随变化。<br><img src="https://bytebucket.org/leopardpan/images/raw/85140d959a75e5da1d8a0d28a0bd27bcce5ae322/2.png?token=11f901163034988c2daa43dc4d7e113aa3560d71" alt=""><br>我们就可以看到一个UIView的子类变成了这样<br><img src="https://bytebucket.org/leopardpan/images/raw/45e0f5f1e5a313286ab81957b55715755f1d5732/3.png?token=8aa7a81d49b217c954a91824cd670ebc3ba6c877" alt=""></p>
-<h2 id="Objective-C_IBDesignable/IBInspectable">Objective-C IBDesignable/IBInspectable</h2><p>建一个ViewOC类，ViewOC继承自UIView，选择Objective-C语言，在.h里面声明属性</p>
-<pre><code class="bash">@property (nonatomic, assign)IBInspectable CGFloat cornerRadius;
-@property (nonatomic, assign)IBInspectable CGFloat bwidth;
-@property (nonatomic, assign)IBInspectable UIColor *bcolor;
-</code></pre>
-<p>注意：IBInspectable修饰的位置。</p>
-<p>然后再.m文件里面，@implementation前面用IB_DESIGNABLE修饰。</p>
-<pre><code class="bash">IB_DESIGNABLE
-@implementation ViewOC
-</code></pre>
-<p>然后再set方法里面去赋值就OK了，如下：</p>
-<pre><code class="bash">- (void)<span class="built_in">set</span>CornerRadius:(CGFloat)cornerRadius{
-    _cornerRadius = cornerRadius;
-    self.layer.cornerRadius  = _cornerRadius;
-    self.layer.masksToBounds = YES;
-}
-
-- (void)<span class="built_in">set</span>Bcolor:(UIColor *)bcolor{
-    _bcolor = bcolor;
-    self.layer.borderColor = _bcolor.CGColor;
-}
-
-- (void)<span class="built_in">set</span>Bwidth:(CGFloat)bwidth {
-    _bwidth = bwidth;
-    self.layer.borderWidth = _bwidth;
-}
-</code></pre>
-<p>效果跟上面Swift是一样的，如果有疑问和建议，欢迎指导和提问。</p>
+        <h2 id="iOS9_iPad分屏多任务操作教程">iOS9 iPad分屏多任务操作教程</h2><h2 id="@iPad用户："><font color="cd6600">@iPad用户</font>：</h2><h2 id="SlideOver："><font color="cd6600">SlideOver</font>：</h2><p><font color="cd6600">简介</font>：iPad简单分屏功能，左侧原来的App占据屏幕的70%面积，右侧是30%，右侧App出来后进入活跃状态，左侧的App，所有基本活动将中断，但是并没有进入后台。</p>
+<p><font color="cd6600">适用机型</font>：iPad air以及iPad mini2以后的所有机型</p>
+<p><font color="cd6600">使用方法</font>：从屏幕右侧边缘轻扫，默认会打开上次打开过得App，顶部有一个Home键，往下拉可以展示所有可以展示的App。</p>
+<h2 id="SplitView："><font color="cd6600">SplitView</font>：</h2><p><font color="cd6600">简介</font>：iPad分屏功能，允许两个应用在同一屏幕上显示，需要平板有足够强大的CPU和足够的内存来保证两款应用的流畅度。</p>
+<p><font color="cd6600">适用机型</font>：iPad Air2，苹果官网（去年更新的）显示仅有iPad Air2支持这一功能</p>
+<p><font color="cd6600">使用方法</font>：首先要经过SlideOver，如果你的是iPad Air2，你再轻扫后，两个App的中间的竖线有个白色半透明的条，点击这个条就会激活 SplitView，然后拖拽这个条就可以变换两个App的在屏幕里的大小了。</p>
+<h2 id="Pictuer_in_Picture："><font color="cd6600">Pictuer in Picture</font>：</h2><p><font color="cd6600">简介</font>： 画中画（PiP）功能，让用户查看一个悬浮的App，只占据屏幕的一小部分面积。如果同时也在使用分屏功能的话，那么在同一屏幕可以同时使用三个App。</p>
+<p><font color="cd6600">适用机型</font>：iPad air以及iPad mini2以后的机型</p>
+<p><font color="cd6600">使用方法</font>：例如现在你在看视频，然后按下Home键，当前的视频就会悬浮在屏幕上。</p>
+<h2 id="@Developer_User:"><font color="cd6600">@Developer User</font>:</h2><p>如果App是在Xcode7以前的环境开发的，要提供一个LaunchScreen.storyboard文件，不要使用之前的默认启动图片，Xcode6创建的项目自带的是LaunchScreen.Xib，Xcode7创建的项目会自带LaunchScreen.storyboard。</p>
+<h2 id="SlideOver：-1"><font color="cd6600">SlideOver</font>：</h2><p>Demo在左侧：当右侧App出来的时候，左侧的将会被蒙上蒙版，正常活动将被终止，并没有进入后台</p>
+<p><font color="cd6600">调用方法</font>：<br>1、applicationWillResignActive：（右侧App出来）<br>2、applicationDidBecomeActive：（右侧App消失）<br>Demo SDK在右侧：自己从右侧出现的时候，相当于把一个App重新打开和后台挂起<br>1.1、didFinishLaunchingWithOptions：（如果Demo没有启动过，Demo出现）<br>1.2、applicationWillEnterForeground：（如果Demo之前是挂在后台，Demo出现）<br>2、applicationDidBecomeActive：（Demo完全出现）<br>3、 applicationWillResignActive：（Demo自己消失）</p>
+<p>4、 applicationDidEnterBackground：（Demo完全自己消失）</p>
+<h2 id="SplitView：-1"><font color="cd6600">SplitView</font>：</h2><p>Demo 在左侧：<br>1、applicationWillResignActive：（右侧App出来，此时只相当于SlideOver效果）<br>2、applicationDidBecomeActive：（SplitView效果）</p>
+<p>点击中间的小竖线激活SplitView<br>每次调整都会调用这两个方法<br>3、applicationWillResignActive：（调整两个App在屏幕中的位置，开始拖动）<br>4、applicationDidBecomeActive：（调整两个App在屏幕中的位置，拖动结束）</p>
+<p>右边的App把Demo的完全挤出屏幕<br>5、applicationWillResignActive：（调整两个App在屏幕中的位置，开始拖动）<br>6、applicationDidEnterBackground：（Demo完全消失在屏幕）</p>
+<p>Demo在右侧：<br>1.1、didFinishLaunchingWithOptions：（如果Demo没有启动过，Demo出现）<br>1.2、applicationWillEnterForeground：（如果Demo之前是挂在后台，Demo出现）<br>2、applicationDidBecomeActive：（Demo出现）</p>
+<p>每次调整都会调用这两个方法<br>3、applicationWillResignActive：（调整两个App在屏幕中的位置，开始拖动）<br>4、applicationDidBecomeActive：（调整两个App在屏幕中的位置，拖动结束）</p>
+<h2 id="Pictuer_in_Picture：-1"><font color="cd6600">Pictuer in Picture</font>：</h2><p>集成画中画这个功能，需要应用做PiP功能的支持，测试暂时放置</p>
+<p>参考资料：<br><a href="https://developer.apple.com/library/ios/documentation/WindowsViews/Conceptual/AdoptingMultitaskingOniPad/QuickStartForSlideOverAndSplitView.html#//apple_ref/doc/uid/TP40015145-CH13-SW1">官网</a> 、 <a href="http://www.macrumors.com/2015/09/16/ios-9-split-screen-multitasking-ipad/">Split-Screen Multitasking for the iPad</a></p>
 
       
     </div>
@@ -284,18 +258,9 @@ class View: UIView {
     
 <nav id="article-nav">
   
-    <a href="/2015/09/14/单元测试/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          单元测试
-        
-      </div>
-    </a>
   
-  
-    <a href="/2015/08/23/hexo/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">HEXO</div>
+    <a href="/2015/09/22/iOS9的变化/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">iOS9的变化</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -324,7 +289,7 @@ class View: UIView {
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="在OC和Swift中使用IBDesignable-IBInspectable" data-title="在OC和Swift中使用IBDesignable/IBInspectable" data-url="leopardpan.github.io/2015/09/03/在OC和Swift中使用IBDesignable-IBInspectable/"></div>
+	<div class="ds-thread" data-thread-key="iPad-Multitasking" data-title="iPad Multitasking" data-url="leopardpan.github.io/2015/09/23/iPad-Multitasking/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
