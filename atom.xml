@@ -10,7 +10,7 @@
   
   <author>
     <name><![CDATA[潘柏信]]></name>
-    <email><![CDATA[panbaixin123@163.com]]></email>
+    
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
@@ -52,8 +52,8 @@
   
   <entry>
     <title><![CDATA[iOS9变化笔记]]></title>
-    <link href="leopardpan.github.io/2015/09/22/iOS9/"/>
-    <id>leopardpan.github.io/2015/09/22/iOS9/</id>
+    <link href="leopardpan.github.io/2015/09/22/iOS9%E7%9A%84%E5%8F%98%E5%8C%96/"/>
+    <id>leopardpan.github.io/2015/09/22/iOS9的变化/</id>
     <published>2015-09-22T13:06:23.000Z</published>
     <updated>2015-09-24T13:57:29.000Z</updated>
     <content type="html"><![CDATA[<p>这里将介绍下我们日常开发一些从iOS8过度到iOS9给我们带来的一些变化，及解决方法。</p>
