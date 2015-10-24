@@ -5,7 +5,7 @@
   <subtitle><![CDATA[勤劳的小码农]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="leopardpan.github.io//"/>
-  <updated>2015-10-24T02:54:41.000Z</updated>
+  <updated>2015-10-24T03:00:06.000Z</updated>
   <id>leopardpan.github.io//</id>
   
   <author>
@@ -16,12 +16,12 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title><![CDATA[dynamic update]]></title>
+    <title></title>
     <link href="leopardpan.github.io/2015/10/24/dynamic-update/"/>
     <id>leopardpan.github.io/2015/10/24/dynamic-update/</id>
     <published>2015-10-24T02:49:52.000Z</published>
-    <updated>2015-10-24T02:54:41.000Z</updated>
-    <content type="html"><![CDATA[<h1 id="iOS_动态更新">iOS 动态更新</h1><h3 id="App_动态更新"><code>App</code> 动态更新</h3><blockquote>
+    <updated>2015-10-24T03:00:06.000Z</updated>
+    <content type="html"><![CDATA[<h3 id="App_动态更新"><code>App</code> 动态更新</h3><blockquote>
 <ul>
 <li>1、控件到 <code>window</code> 的层级关系:   </li>
 <li>2、分析控件的详细路径:</li>
@@ -29,7 +29,7 @@
 <li>4、工具篇:</li>
 </ul>
 </blockquote>
-<h4 id="控件到_window_的层级关系:">控件到 <code>window</code> 的层级关系:</h4><blockquote>
+<h4 id="视图的层级关系:">视图的层级关系:</h4><blockquote>
 <p>每个 <code>App</code> , 至少有一个根 <code>Window</code> , 通常情况下我们只用一个 。<code>window</code> 有一个 <code>rootViewController</code> , 这就是我们所谓的根视图 , 我们所有的控制器都是放在 <code>rootViewController</code> 里面的。</p>
 </blockquote>
 <p><img src="Dynamic-image1.jpeg" width="200px"/></p>
@@ -45,7 +45,7 @@
 </ul>
 </blockquote>
 <p>　下面将介绍如何使用代码来找出这些视图(控件)的路径</p>
-<h4 id="分析控件的详细路径">分析控件的详细路径</h4><h5 id="1、找出_Window_:">1、找出 <code>Window</code> :</h5><blockquote>
+<h4 id="分析控件的详细路径">分析控件的详细路径</h4><h5 id="1、找出根_Window_:">1、找出根 <code>Window</code> :</h5><blockquote>
 <p> 每一个视图、控件 , 他们最终的根都是main函数返回的 <code>application</code> , 通过 <code>[UIApplication sharedApplication]</code> 可以得到 。 <code>application</code> 的 <code>windows</code> 属性是一个数组 , 这里面装的是这个应用的所有 <code>Window</code> , 我们通常用的是第一个也就是 <code>application.windows[0]</code>    </p>
 </blockquote>
 <h5 id="2、遍历视图_:">2、遍历视图 :</h5><blockquote>
@@ -83,11 +83,14 @@
 <p>Reveal的功能相对来说更强大 , 适用于UI调试视图查找 。使用方法请看 <a href="http://support.revealapp.com/kb/getting-started/reveal">Reveal集成指南</a> 。</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<h1 id="iOS_动态更新">iOS 动态更新</h1><h3 id="App_动态更新"><code>App</code> 动态更新</h3><blockquote>
+    <![CDATA[<h3 id="App_动态更新"><code>App</code> 动态更新</h3><blockquote>
 <ul>
 <li>1、控件到 <code>window</code> 的层级关系:   </li>
-<l]]>
+<li>2、分析控件的详细路径:</li>
+<li>3、动态修改控]]>
     </summary>
+    
+      <category term="iOS" scheme="leopardpan.github.io/tags/iOS/"/>
     
   </entry>
   
