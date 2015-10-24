@@ -5,7 +5,7 @@
   <subtitle><![CDATA[勤劳的小码农]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="leopardpan.github.io//"/>
-  <updated>2015-10-24T03:00:06.000Z</updated>
+  <updated>2015-10-24T03:00:33.000Z</updated>
   <id>leopardpan.github.io//</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="leopardpan.github.io/2015/10/24/dynamic-update/"/>
     <id>leopardpan.github.io/2015/10/24/dynamic-update/</id>
     <published>2015-10-24T02:49:52.000Z</published>
-    <updated>2015-10-24T03:00:06.000Z</updated>
+    <updated>2015-10-24T03:00:33.000Z</updated>
     <content type="html"><![CDATA[<h3 id="App_动态更新"><code>App</code> 动态更新</h3><blockquote>
 <ul>
 <li>1、控件到 <code>window</code> 的层级关系:   </li>
@@ -55,7 +55,7 @@
 <blockquote>
 <p>1)、<code>button</code> 的全路径 : 如 <code>UIWindow</code> -&gt; <code>UIWindow</code> -&gt; <code>UIView</code> -&gt; <code>UIView</code> -&gt; <code>UILayoutContainerView</code> -&gt; <code>UITabBar</code> -&gt; <code>UIView</code> —&gt; <code>UIButton</code><br>2)、<code>button</code> 的唯一标识 : 如 <code>tag</code> 值或自己实现的一套算法生成的唯一标识 , 目的是防止与 <code>button</code> 同一层次的视图搞混 。<br>3)、 根据路径及唯一标识来匹配 <code>App</code> 里的控件 , 匹配和上面的查找原理是相通的。<br>4)、 匹配成功代表  <code>button</code> 确实存在 , 根据业务需求做后续操作 。<br>提示: 匹配策略尽可能的多 , 防止意外情况某一两个标识生成失败或者生成相同 。</p>
 </blockquote>
-<p>3、修改 <code>button</code> 的事件处理 。</p>
+<p>3、修改 <code>button</code> 的状态。</p>
 <blockquote>
 <p>1)、 如某个按钮点了会 <code>Crash</code> 或暂时不需要被点击 , 但是又要展示出来 , 可以直接修改 <code>button</code> 的 <code>enabled</code> 属性 。<br>2)、 如某业务暂时关闭 , 可以直接修改入口 <code>按钮</code> frame为0 , 前提是要自动布局已做好 。<br>3)、 如给购买 <code>按钮</code> 添加监听事件 <code>addTarget: action: forControlEvents:</code><br><code>target</code> 也可以通过上面 <code>遍历视图</code> 获取到 , <code>action</code> 可以由服务器下发 , 也可以一开始就写死 , 等有需求的时候直接传不同的参数就行了 。  </p>
 </blockquote>
